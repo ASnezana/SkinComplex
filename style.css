@@ -33,6 +33,7 @@ body {
   background-color: var(--color-cream);
   color: var(--color-plum);
   line-height: 1.6;
+  overflow-x: hidden; /* zapobiega poziomemu przewijaniu */
 }
 
 /* ---------------------------
