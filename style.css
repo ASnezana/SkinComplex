@@ -8,10 +8,10 @@
 }
 
 :root {
-  --color-navy: #1a2b4c;
-  --color-blue: #97d4ff;
-  --color-cream: #fdf8f3;
-  --color-pink: #f8a9b8;
+  --color-plum: #614379;
+  --color-blue: #8cc1e9;
+  --color-cream: /*#fdf8f3; */ #fff8e7;
+  --color-pink: #FF8A8B;
   --color-white: #ffffff;
   --color-gray: #666;
   --max-width: 1200px;
@@ -23,7 +23,7 @@
 
 body {
   background-color: var(--color-cream);
-  color: var(--color-navy);
+  color: var(--color-plum);
   line-height: 1.6;
 }
 
@@ -40,7 +40,7 @@ body {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: var(--color-navy);
+  color: var(--color-plum);
 }
 
 /* ---------------------------
@@ -73,7 +73,7 @@ body {
 
 .nav__list a {
   text-decoration: none;
-  color: var(--color-navy);
+  color: var(--color-plum);
   font-weight: 500;
   transition: var(--transition);
 }
@@ -87,7 +87,7 @@ body {
   display: none;
   background: none;
   border: none;
-  color: var(--color-navy);
+  color: var(--color-plum);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -246,7 +246,7 @@ body {
 }
 
 .pricing__table th {
-  background: var(--color-navy);
+  background: var(--color-plum);
   color: var(--color-white);
   padding: 1rem;
 }
@@ -299,7 +299,7 @@ body {
    SOCIAL
 --------------------------- */
 .social {
-  background: var(--color-navy);
+  background: var(--color-plum);
   padding: 1.5rem 0;
 }
 
