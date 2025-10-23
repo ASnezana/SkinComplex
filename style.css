@@ -67,7 +67,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*padding: 1rem 0; */
+  position: relative;
+  padding: 1rem 0; 
 }
 
 .header__logo img {
