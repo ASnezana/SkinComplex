@@ -184,7 +184,7 @@ body {
 .about__quote {
   position: relative;
   width: 100vw; /* pełna szerokość okna */
-  height: 300px; /* możesz dostosować wysokość */
+  height: 80vh; /* możesz dostosować wysokość */
   margin-top: 2rem; /* odstęp od poprzedniej części */
   background-image: url('images/your-image.JPEG'); /* zmień na swoją ścieżkę */
   background-size: cover;
