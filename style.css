@@ -349,9 +349,11 @@ body {
     background: var(--color-white);
     flex-direction: column;
     width: 200px;
+    max-width: 80vw;  /* zapobiega zbyt szerokiemu menu na małych ekranach */
     box-shadow: var(--shadow);
     transform: translateX(100%);
     transition: var(--transition);
+    z-index: 1500;
   }
 
   .nav__list.active {
