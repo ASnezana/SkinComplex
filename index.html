@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salon Beauty</title>
+
+  <!-- Fonty i ikony -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__content">
+      <div class="header__logo">
+        <img src="images/logo.png" alt="Logo salonu beauty" />
+      </div>
+
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li><a href="#home">Strona główna</a></li>
+          <li><a href="#about">O mnie</a></li>
+          <li><a href="#services">Usługi</a></li>
+          <li><a href="#gallery">Galeria</a></li>
+          <li><a href="#pricing">Cennik</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger -->
+      <button class="header__toggle" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero__slider">
+      <div class="hero__slide hero__slide--active" style="background-image: url('images/slide1.jpg');"></div>
+      <div class="hero__slide" style="background-image: url('images/slide2.jpg');"></div>
+      <div class="hero__slide" style="background-image: url('images/slide3.jpg');"></div>
+    </div>
+  </section>
+
+  <!-- INFO BOXES -->
+  <section class="info">
+    <div class="container info__container">
+      <div class="info__box">
+        <i class="fa-solid fa-phone"></i>
+        <p><strong>Telefon:</strong> +48 123 456 789</p>
+      </div>
+      <div class="info__box">
+        <i class="fa-solid fa-clock"></i>
+        <p><strong>Godziny otwarcia:</strong><br />Pon–Pt: 9:00–18:00</p>
+      </div>
+      <div class="info__box">
+        <i class="fa-solid fa-envelope"></i>
+        <p><strong>Email:</strong> kontakt@salonbeauty.pl</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container about__content">
+      <div class="about__text">
+        <h2 class="section-title">O mnie</h2>
+        <p>
+          Nazywam się Anna Kowalska i od ponad 10 lat pomagam kobietom czuć się pięknie i pewnie.
+          W moim salonie znajdziesz profesjonalne zabiegi pielęgnacyjne wykonywane z pasją i zaangażowaniem.
+        </p>
+        <p>
+          Każda wizyta to chwila relaksu, w której możesz odpocząć i zadbać o siebie.
+          Serdecznie zapraszam do mojego salonu!
+        </p>
+      </div>
+
+      <div class="about__image">
+        <img src="images/about.jpg" alt="Właścicielka salonu beauty" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title">Usługi</h2>
+      <div class="services__grid">
+        <div class="service" title="Stylowy manicure klasyczny i hybrydowy">
+          <i class="fa-solid fa-hand-sparkles"></i>
+          <p>Manicure</p>
+        </div>
+        <div class="service" title="Specjalistyczna pielęgnacja stóp">
+          <i class="fa-solid fa-shoe-prints"></i>
+          <p>Podologia</p>
+        </div>
+        <div class="service" title="Makijaż dzienny, wieczorowy i ślubny">
+          <i class="fa-solid fa-face-smile"></i>
+          <p>Makijaż</p>
+        </div>
+        <div class="service" title="Relaksujące i lecznicze masaże">
+          <i class="fa-solid fa-spa"></i>
+          <p>Masaż</p>
+        </div>
+        <div class="service" title="Zabiegi pielęgnacyjne i regenerujące skórę twarzy">
+          <i class="fa-solid fa-face-relieved"></i>
+          <p>Zabiegi na twarz</p>
+        </div>
+        <div class="service" title="Depilacja woskiem i pastą cukrową">
+          <i class="fa-solid fa-scissors"></i>
+          <p>Depilacja</p>
+        </div>
+        <div class="service" title="Henna brwi i rzęs, stylizacja brwi">
+          <i class="fa-solid fa-eye"></i>
+          <p>Henna</p>
+        </div>
+        <div class="service" title="Zabiegi pielęgnacyjne na ciało">
+          <i class="fa-solid fa-leaf"></i>
+          <p>Zabiegi na ciało</p>
+        </div>
+        <div class="service" title="Peeling ciała z naturalnych składników">
+          <i class="fa-solid fa-bath"></i>
+          <p>Peeling</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2 class="section-title">Galeria</h2>
+      <div class="gallery__grid">
+        <img src="images/gallery1.jpg" alt="Galeria 1" />
+        <img src="images/gallery2.jpg" alt="Galeria 2" />
+        <img src="images/gallery3.jpg" alt="Galeria 3" />
+        <img src="images/gallery4.jpg" alt="Galeria 4" />
+        <img src="images/gallery5.jpg" alt="Galeria 5" />
+        <img src="images/gallery6.jpg" alt="Galeria 6" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2 class="section-title">Cennik</h2>
+      <table class="pricing__table">
+        <thead>
+          <tr>
+            <th>Usługa</th>
+            <th>Opis</th>
+            <th>Cena</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td rowspan="5">Manicure</td><td>Klasyczny</td><td>60 zł</td></tr>
+          <tr><td>Hybrydowy</td><td>90 zł</td></tr>
+          <tr><td>French</td><td>100 zł</td></tr>
+          <tr><td>Spa manicure</td><td>110 zł</td></tr>
+          <tr><td>Żelowy</td><td>120 zł</td></tr>
+
+          <tr><td rowspan="5">Podologia</td><td>Pedicure podstawowy</td><td>100 zł</td></tr>
+          <tr><td>Pedicure leczniczy</td><td>130 zł</td></tr>
+          <tr><td>Usuwanie odcisków</td><td>60 zł</td></tr>
+          <tr><td>Rekonstrukcja paznokcia</td><td>80 zł</td></tr>
+          <tr><td>Konsultacja</td><td>50 zł</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container contact__content">
+      <h2 class="section-title">Jak nas znaleźć</h2>
+      <div class="contact__map">
+        <img src="images/map.jpg" alt="Mapa dojazdu do salonu beauty" />
+      </div>
+
+      <a
+        href="https://www.google.com/maps"
+        target="_blank"
+        class="btn btn--map"
+        >Znajdź nas na Google Maps</a
+      >
+
+      <div class="contact__details">
+        <p><strong>Adres:</strong> ul. Kwiatowa 10, 00-000 Warszawa</p>
+        <p><strong>Telefon:</strong> +48 123 456 789</p>
+        <p><strong>Email:</strong> kontakt@salonbeauty.pl</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL -->
+  <section class="social">
+    <div class="container social__icons">
+      <a href="#" target="_blank" aria-label="Instagram"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+      <a href="#" target="_blank" aria-label="Facebook"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Salon Beauty. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
