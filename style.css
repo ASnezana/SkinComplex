@@ -21,6 +21,14 @@
   font-family: 'Poppins', sans-serif;
 }
 
+
+html {
+  scroll-padding-top: 120px; /* dostosuj do wysokości headera */
+  scroll-behavior: smooth;
+}
+
+
+
 body {
   background-color: var(--color-cream);
   color: var(--color-plum);
@@ -58,11 +66,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  /*padding: 1rem 0; */
 }
 
 .header__logo img {
-  height: 120px;
+  height: 80px;
 }
 
 .nav__list {
@@ -356,3 +364,5 @@ body {
     flex-direction: column-reverse;
   }
 }
+
+
