@@ -75,6 +75,10 @@ body {
   height: 80px;
 }
 
+.header__logo-name img {
+  height: 80px;
+}
+
 .nav__list {
   display: flex;
   list-style: none;
