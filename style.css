@@ -378,10 +378,35 @@ body {
   padding: 1rem 0;
 }
 
+
+
+/* ---------------------------
+   ANIMACJE
+--------------------------- */
+
+/*efekt przejścia między slajdami hero */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: scale(1.05); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.hero__slide--active {
+  animation: fadeSlide 2s ease forwards;
+}
+
+
+
+
 /* ---------------------------
    RESPONSYWNOŚĆ
 --------------------------- */
 @media (max-width: 768px) {
+
+  .header__toggle.open i {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+
   .nav__list {
     position: absolute;
     top: 70px;
