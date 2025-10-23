@@ -180,6 +180,46 @@ body {
   box-shadow: var(--shadow);
 }
 
+/* Kontener pełnej szerokości pod sekcją o mnie */
+.about__quote {
+  position: relative;
+  width: 100vw; /* pełna szerokość okna */
+  height: 300px; /* możesz dostosować wysokość */
+  margin-top: 2rem; /* odstęp od poprzedniej części */
+  background-image: url('images/your-image.JPEG'); /* zmień na swoją ścieżkę */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Przyciemniona nakładka */
+.about__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* półprzezroczyste czarne */
+  z-index: 1;
+}
+
+/* Tekst cytatu na środku */
+.about__quote-text {
+  position: relative;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  z-index: 2;
+  text-align: center;
+  padding: 0 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+
 /* ---------------------------
    SERVICES
 --------------------------- */
