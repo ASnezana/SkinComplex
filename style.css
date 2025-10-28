@@ -9,7 +9,7 @@
 
 :root {
   --color-plum: #614379;
-  --color-blue: #A9D6E5;
+  --color-blue: #c2e9ff;
   --color-cream: /*#fdf8f3; */ #f7f2ed;
   --color-pink: #FF8A8B;
   --color-white: #ffffff;
@@ -133,7 +133,7 @@ body {
 --------------------------- */
 .info {
   background: var(--color-blue);
-  color: var(--color-white);
+  color: var(--color-plum);
   padding: 2rem 0;
 }
 
