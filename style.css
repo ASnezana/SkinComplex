@@ -53,6 +53,10 @@ html {
   transition: all 0.3s ease;
   z-index: 999;
 }
+#backToTop i {
+  font-size: 20px;
+}
+
 
 /* Pokazuj dopiero po scrollu */
 #backToTop.show {
