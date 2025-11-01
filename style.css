@@ -39,8 +39,8 @@ html {
   right: 30px;
   width: 55px;
   height: 55px;
-  background-color: var(--color-plum); /* fioletowe kółko */
-  color: var(--color-white); /* biała strzałka */
+  background-color: var(--color-plum);
+  color: var(--color-white);
   font-size: 28px;
   font-weight: bold;
   border-radius: 50%;
@@ -50,9 +50,12 @@ html {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
   z-index: 999;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(4px); /* ✨ lekki blur tła */
+  box-shadow: 0 6px 18px rgba(97, 67, 121, 0.35); /* 🌫️ delikatny fioletowy cień */
 }
+
 #backToTop i {
   font-size: 30px;
 }
@@ -66,11 +69,15 @@ html {
 
 /* Hover (ładny zoom) */
 #backToTop:hover {
-  transform: scale(1.12);
-  background-color: var(--color-pink); /* lekko ciemniejszy fiolet */
+  transform: scale(1.15) translateY(-2px);
+  background-color: var(--color-pink);
+  box-shadow: 0 8px 25px rgba(255, 138, 139, 0.45); /* jaśniejszy cień na hover */
 }
 
 
+/* ---------------------------
+   BODY
+--------------------------- */
 
 body {
   background-color: var(--color-cream);
