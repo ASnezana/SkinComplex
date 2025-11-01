@@ -39,8 +39,8 @@ html {
   right: 30px;
   width: 55px;
   height: 55px;
-  background-color: #7b4bff; /* fioletowe kółko */
-  color: white; /* biała strzałka */
+  background-color: var(--color-plum); /* fioletowe kółko */
+  color: var(--color-white); /* biała strzałka */
   font-size: 28px;
   font-weight: bold;
   border-radius: 50%;
@@ -54,7 +54,7 @@ html {
   z-index: 999;
 }
 #backToTop i {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 
@@ -67,7 +67,7 @@ html {
 /* Hover (ładny zoom) */
 #backToTop:hover {
   transform: scale(1.12);
-  background-color: #6d3aff; /* lekko ciemniejszy fiolet */
+  background-color: var(--color-pink); /* lekko ciemniejszy fiolet */
 }
 
 
