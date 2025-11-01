@@ -304,6 +304,11 @@ body {
   cursor: pointer;
 }
 
+.service img {
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+
 .service:hover {
   background: var(--color-blue);
   color: var(--color-white);
