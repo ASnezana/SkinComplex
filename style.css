@@ -29,6 +29,45 @@ html {
 
 
 
+
+/* ---------------------------
+  PRZYCISK "BACK TO TOP"
+--------------------------- */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+  background-color: #7b4bff; /* fioletowe kółko */
+  color: white; /* biała strzałka */
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+/* Pokazuj dopiero po scrollu */
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hover (ładny zoom) */
+#backToTop:hover {
+  transform: scale(1.12);
+  background-color: #6d3aff; /* lekko ciemniejszy fiolet */
+}
+
+
+
 body {
   background-color: var(--color-cream);
   color: var(--color-plum);
