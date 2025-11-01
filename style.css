@@ -144,7 +144,7 @@ body {
 }
 
 .nav__list a:hover {
-  color: var(--color-blue);
+  color: var(--color-pink);
 }
 
 /* Hamburger */
