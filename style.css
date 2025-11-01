@@ -90,6 +90,7 @@ body {
   color: var(--color-plum);
   font-weight: 500;
   transition: var(--transition);
+  font-family: Rubik, sans-serif;
 }
 
 .nav__list a:hover {
@@ -179,6 +180,11 @@ body {
   transform: translateY(-4px);
  
 }
+.info__box {
+  perspective: 2000px;
+}
+
+
 
 
 
@@ -234,9 +240,29 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* półprzezroczyste czarne */
+ 
   z-index: 1;
 }
+
+.about__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+ /* background-color: rgba(0, 0, 0, 0.5); */ /* jednolita przyciemniona nakładka */
+
+
+ background: linear-gradient(
+  rgba(0, 0, 0, 0.8) 0%, /* GÓRA — najciemniej */
+  rgba(0, 0, 0, 0.55) 30%,
+  rgba(0, 0, 0, 0.25) 50%,
+  rgba(0, 0, 0, 0.1) 70% /* DÓŁ — prawie jasno */
+);
+
+}
+
 
 /* Tekst cytatu na środku */
 .about__quote-text {
@@ -249,7 +275,7 @@ body {
   z-index: 2;
   text-align: center;
   padding: 0 1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 
