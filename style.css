@@ -422,7 +422,7 @@ body {
 .service {
   background: var(--color-white);
   padding: 2rem 1rem;
-  border-radius: 8px;
+  border-radius: 8px; 
   box-shadow: var(--shadow);
   transition: var(--transition);
   position: relative;
