@@ -183,7 +183,7 @@ body {
    INFO BOXES
 --------------------------- */
 .info {
-  background: var(--color-blue); /* jasnoniebieskie tło */
+  background: var(--color-white); /* białe tło */
   color: var(--color-plum);
   padding: 2rem 0;
 }
