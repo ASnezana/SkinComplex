@@ -329,6 +329,7 @@ body {
 
 .about__text {
   flex: 1 1 45%;
+  text-align: center;
 }
 
 .about__image {
