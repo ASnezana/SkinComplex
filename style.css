@@ -183,7 +183,7 @@ body {
    INFO BOXES
 --------------------------- */
 .info {
-  background: var(--color-blue);
+  background: var(--color-blue); /* jasnoniebieskie tło */
   color: var(--color-plum);
   padding: 2rem 0;
 }
@@ -200,12 +200,37 @@ body {
   flex: 1 1 200px;
 }
 
+/* 1 box – fioletowy */
+.info__box:nth-child(1) {
+  background-color: var(--color-plum); /* fiolet */
+  color:var(--color-white);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* 2 box – różowy */
+.info__box:nth-child(2) {
+  background-color: var(--color-pink); /* róż */
+  color: var(--color-white);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* 3 box – fioletowy */
+.info__box:nth-child(3) {
+  background-color: var(--color-plum); /* fiolet */
+  color: var(--color-white);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
 
 .info__box i {
   display: block;
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
 }
+
 .info__box img {
   height: 40px;
   margin-bottom: 0.5rem;
