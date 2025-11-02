@@ -135,17 +135,36 @@ body {
   gap: 1.5rem;
 }
 
-.nav__list a {
+.nav__list li a {
+  display: flex;               /* sprawia, że link jest elastyczny */
+  align-items: center;         /* centrowanie pionowe tekstu */
+  justify-content: center;     /* centrowanie poziome (jeśli chcesz) */
+  height: 40px;                /* stała wysokość wszystkich linków */
+  padding: 0 1rem;             /* poziome odstępy wewnątrz linku */
   text-decoration: none;
   color: var(--color-plum);
   font-weight: 500;
   transition: var(--transition);
   font-family: Rubik, sans-serif;
+  border-radius: 5px;          /* zaokrąglone rogi dla linków, opcjonalnie */
 }
+
 
 .nav__list a:hover {
   color: var(--color-pink);
 }
+
+
+
+.nav__list li:last-child a {
+  background-color: var(--color-pink); /* różowe tło dla „Kontakt” */
+  color: var(--color-white);           /* kontrastowy tekst */
+}
+
+.nav__list li:last-child a:hover {
+  background-color: var(--color-plum); /* zmiana tła przy hover */
+}
+
 
 /* Hamburger */
 .header__toggle {
