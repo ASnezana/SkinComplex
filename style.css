@@ -332,6 +332,13 @@ body {
   text-align: center;
 }
 
+.about__text p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
 .about__image {
   flex: 1 1 45%;
 }
