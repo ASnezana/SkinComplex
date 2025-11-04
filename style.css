@@ -10,7 +10,7 @@
 :root {
   --color-plum: #614379;
   --color-blue: #c2e9ff;
-  --color-cream: /*#fdf8f3; */ #f7f2ed;
+  --color-cream: /*#fdf8f3;  #f7f2ed; */ #c1e4f5;
   --color-pink: #FF8A8B;
   --color-white: #ffffff;
   --color-gray: #666;
@@ -442,7 +442,7 @@ body {
 }
 
 .service:hover {
-  background: var(--color-blue);
+  background: var(--color-pink);
   color: var(--color-white);
   transform: translateY(-5px);
 }
