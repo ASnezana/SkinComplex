@@ -355,7 +355,7 @@ body {
   width: 100vw; /* pełna szerokość okna */
   height: 80vh; /* możesz dostosować wysokość */
   margin-top: 2rem; /* odstęp od poprzedniej części */
-  background-image: url('images/your-image.JPEG'); /* zmień na swoją ścieżkę */
+  background-image: url('images/tapeta.jpg'); /* zmień na swoją ścieżkę */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -662,7 +662,7 @@ body {
    FOOTER
 --------------------------- */
 .footer {
-  background: var(--color-blue);
+  background: var(--color-plum);
   color: var(--color-white);
   text-align: center;
   padding: 1rem 0;
