@@ -145,13 +145,13 @@ body {
 /*.header__logo-name img {
   height: 80px;
 } */
- 
+
 .header__logo-name h1 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--color-plum);
   font-size: 2rem;
   margin-left: 10px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .nav__list {
