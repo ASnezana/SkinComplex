@@ -35,7 +35,7 @@
   --transition: all 0.3s ease;
   --shadow: 0 2px 8px rgba(0,0,0,0.1);
   font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -115,6 +115,7 @@ body {
 .section-title {
   text-align: center;
   font-size: 2rem;
+  font-weight: 600;
   margin-bottom: 2rem;
   color: var(--color-plum);
 }
@@ -151,7 +152,7 @@ body {
   color: var(--color-plum);
   font-size: 2rem;
   margin-left: 10px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .nav__list {
@@ -170,7 +171,7 @@ body {
   color: var(--color-plum);
   font-weight: 500;
   transition: var(--transition);
-  font-family: Rubik, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   border-radius: 5px;          /* zaokrąglone rogi dla linków, opcjonalnie */
 }
 
@@ -216,7 +217,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--color-white);
-  font-family: Rubik, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 5px;
   font-size: 4rem;
   font-weight: 600;
@@ -231,7 +232,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--color-white);
-  font-family: Rubik, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 1px;
   font-style: italic;
   font-size: 2.5rem;
@@ -361,7 +362,7 @@ body {
   margin-bottom: 1rem;
   font-size: 1.1rem;
   line-height: 1.8;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .about__image {
@@ -432,7 +433,7 @@ body {
   z-index: 2;
   text-align: center;
   padding: 0 1rem;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 
