@@ -142,8 +142,16 @@ body {
   height: 80px;
 }
 
-.header__logo-name img {
+/*.header__logo-name img {
   height: 80px;
+} */
+ 
+.header__logo-name h1 {
+  font-family: 'Rubik', sans-serif;
+  color: var(--color-plum);
+  font-size: 2rem;
+  margin-left: 10px;
+  font-weight: 600;
 }
 
 .nav__list {
