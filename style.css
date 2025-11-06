@@ -634,6 +634,50 @@ body {
   background: var(--color-cream);
 }
 
+
+/* ---------------------------
+   PRICE SECTION
+--------------------------- */
+.price-section {
+  background: var(--color-white);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.price-title {
+  color: var(--color-plum);
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.price-table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.price-table th,
+.price-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.8rem 1rem;
+  text-align: left;
+}
+
+.price-table th {
+  background: var(--color-plum);
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.pricing__table tr:nth-child(even) {
+  background: var(--color-cream);
+
+.price-table tr:hover td {
+  background: var(--color-10);
+}
+
 /* -----------------
     MAP
 ------------------*/
