@@ -489,6 +489,13 @@ body {
   text-align: center;
 }
 
+.services__grid a.service {
+  text-decoration: none;
+  color: inherit; /* zachowuje kolor tekstu */
+  display: block; /* pozwala zachować ten sam układ co div */
+}
+
+
 .service {
   background: var(--color-white);
   padding: 2rem 1rem;
@@ -607,37 +614,12 @@ body {
 /* ---------------------------
    PRICING
 --------------------------- */
+
 .pricing {
   padding: 4rem 0;
   background: var(--color-white);
 }
 
-.pricing__table {
-  width: 100%;
-  border-collapse: collapse;
-  box-shadow: var(--shadow);
-}
-
-.pricing__table th {
-  background: var(--color-plum);
-  color: var(--color-white);
-  padding: 1rem;
-}
-
-.pricing__table td {
-  padding: 0.8rem 1rem;
-  border-bottom: 1px solid #ddd;
-  text-align: left;
-}
-
-.pricing__table tr:nth-child(even) {
-  background: var(--color-cream);
-}
-
-
-/* ---------------------------
-   PRICE SECTION
---------------------------- */
 .price-section {
   background: var(--color-white);
   padding: 3rem 0;
@@ -671,12 +653,33 @@ body {
   text-transform: uppercase;
 }
 
-.pricing__table tr:nth-child(even) {
-  background: var(--color-cream);
+.price-table tr:nth-child(even) {
+  background: var(--color-5);
+}
 
 .price-table tr:hover td {
-  background: var(--color-10);
+  background: var(--color-8);
 }
+
+.price-table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.price-section .container {
+  background: var(--color-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
 
 /* -----------------
     MAP
