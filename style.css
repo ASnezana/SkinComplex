@@ -116,6 +116,7 @@ body {
   text-align: center;
   font-size: 2rem;
   font-weight: 600;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   color: var(--color-plum);
 }
@@ -589,6 +590,12 @@ body {
 /* -----------------
     MAP
 ------------------*/
+.map_content h2 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-plum);
+}
 
 .map-responsive {
   position: relative;
@@ -623,7 +630,7 @@ body {
 
 .contact__details {
   text-align: center; /* centrowanie całego bloku */
-    margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .contact__details p {
