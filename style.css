@@ -204,6 +204,42 @@ body {
 }
 
 /* ---------------------------
+   PHONE BAR
+--------------------------- */
+.phone-bar {
+  background: var(--color-plum);
+  padding: 0.6rem 0;
+}
+
+.phone-bar__content {
+  text-align: center;
+}
+
+.phone-link {
+  color: var(--color-white);
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.phone-link:hover {
+  color: var(--color-pink);
+}
+
+.phone-link i {
+  font-size: 1.2rem;
+}
+.phone-number {
+  font-weight: 400;
+}
+
+
+
+
+/* ---------------------------
    HERO
 --------------------------- */
 .hero {
