@@ -21,13 +21,15 @@
  --color-9:#D1D930;
  --color-10:#FBFFB1;
  --color-11:#325094; /*kolor tła kwiatka-logo */
+ --color-1-bright:#E6F4FB; /*jasny błękitny do tabelki cennika na zmiane z błekitnym*/
+ --color-1-more-bright:#D4EDF9; /*jeszcze jaśniejszy błękitny do tabelki cennika*/
 
 
 
 
   --color-plum:/* #325094; */#05668D;
   --color-blue: #c2e9ff;
-  --color-cream: /*#fdf8f3;  #f7f2ed; */ #c1e4f5;
+  --color-cream: /*#fdf8f3;  #f7f2ed; */ #c1e4f5;  /*  błekitny */
   --color-pink: /*#FF8A8B; */#9DDC57;
   --color-white: #ffffff;
   --color-gray: #666;
@@ -654,7 +656,11 @@ body {
 }
 
 .price-table tr:nth-child(even) {
-  background: var(--color-5);
+  background: var(--color-1-bright);
+}
+
+.price-table tr:nth-child(odd) {
+  background: var(--color-1-more-bright);
 }
 
 .price-table tr:hover td {
@@ -672,7 +678,7 @@ body {
 }
 
 .price-section .container {
-  background: var(--color-white);
+  background: var(--color-cream);
   border-radius: 8px;
   box-shadow: var(--shadow);
   padding: 2rem;
