@@ -498,6 +498,7 @@ body {
 }
 
 
+
 .service {
   background: var(--color-white);
   padding: 2rem 1rem;
@@ -518,6 +519,13 @@ body {
   color: var(--color-white);
   transform: translateY(-5px);
 }
+
+.service:hover,
+.service:hover p,
+.service:hover i {
+  color: var(--color-white);
+}
+
 
 .service i {
   font-size: 2rem;
