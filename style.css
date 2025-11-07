@@ -23,6 +23,7 @@
  --color-11:#325094; /*kolor tła kwiatka-logo */
  --color-1-bright:#E6F4FB; /*jasny błękitny do tabelki cennika na zmiane z błekitnym*/
  --color-1-more-bright:#D4EDF9; /*jeszcze jaśniejszy błękitny do tabelki cennika*/
+ 
 
 
 
@@ -30,7 +31,7 @@
   --color-plum:/* #325094; */#05668D;
   --color-blue: #c2e9ff;
   --color-cream: /*#fdf8f3;  #f7f2ed; */ #c1e4f5;  /*  błekitny */
-  --color-pink: /*#FF8A8B; */#9DDC57;
+  --color-accent: /*#FF8A8B; */#9DDC57;
   --color-white: #ffffff;
   --color-gray: #666;
   --max-width: 1200px;
@@ -71,8 +72,8 @@ html {
   visibility: hidden;
   z-index: 999;
   transition: all 0.35s ease;
-  backdrop-filter: blur(4px); /* ✨ lekki blur tła */
-  box-shadow: 0 6px 18px rgba(97, 67, 121, 0.35); /* 🌫️ delikatny fioletowy cień */
+  backdrop-filter: blur(4px); /*  lekki blur tła */
+  box-shadow: 0 6px 18px #61437959; /* 🌫️ delikatny fioletowy cień */
 }
 
 #backToTop i {
@@ -89,7 +90,7 @@ html {
 /* Hover (ładny zoom) */
 #backToTop:hover {
   transform: scale(1.15) translateY(-2px);
-  background-color: var(--color-pink);
+  background-color: var(--color-accent);
   box-shadow: 0 8px 25px rgba(255, 138, 139, 0.45); /* jaśniejszy cień na hover */
 }
 
@@ -180,13 +181,13 @@ body {
 
 
 .nav__list a:hover {
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 
 
 .nav__list li:last-child a {
-  background-color: var(--color-pink); /* różowe tło dla „Kontakt” */
+  background-color: var(--color-accent); /* różowe tło dla „Kontakt” */
   color: var(--color-white);           /* kontrastowy tekst */
 }
 
@@ -228,7 +229,7 @@ body {
 }
 
 .phone-link:hover {
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 .phone-link i {
@@ -324,7 +325,7 @@ body {
 
 /* 2 box – różowy */
 .info__box:nth-child(2) {
-  background-color: var(--color-pink); /* róż */
+  background-color: var(--color-accent); /* róż */
   color: var(--color-white);
   border-radius: 10px;
   padding: 1rem;
@@ -519,7 +520,7 @@ body {
 }
 
 .service:hover {
-  background: var(--color-pink);
+  background: var(--color-accent);
   color: var(--color-white);
   transform: translateY(-5px);
 }
@@ -638,7 +639,7 @@ body {
 
 .pricing {
   padding: 4rem 0;
-  background: var(--color-white;
+  background: var(--color-white);
 }
 
 .price-section {
@@ -788,6 +789,10 @@ body {
   box-shadow: 0 6px 14px rgba(97, 67, 121, 0.5);
 }
 
+.icon-badge:hover i {
+  color: var(--color-accent);
+}
+
 
 
 
@@ -811,7 +816,7 @@ body {
 }
 
 .social__icons a:hover {
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 /* ---------------------------
