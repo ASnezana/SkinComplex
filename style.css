@@ -486,10 +486,14 @@ body {
 
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  justify-content: center; /* wyśrodkowuje całą siatkę w poziomie */
   gap: 1.5rem;
   text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  max-width: 1000px; /* żeby nie rozciągały się na cały ekran */
+  margin: 0 auto; /* centrowanie całej siatki w kontenerze */
 }
+
 
 .services__grid a.service {
   text-decoration: none;
@@ -498,9 +502,9 @@ body {
 }
 
 
-
+/* Kafelek */
 .service {
-  background: var(--color-white);
+  background: var(--color-1-bright);
   padding: 2rem 1rem;
   border-radius: 8px; 
   box-shadow: var(--shadow);
@@ -526,12 +530,19 @@ body {
   color: var(--color-white);
 }
 
+/*.service:hover img {
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+} */
 
-.service i {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: var(--color-pink);
+/* --- RWD --- */
+@media (max-width: 768px) {
+  .services__grid {
+    grid-template-columns: 1fr; /* jeden kafelek w wierszu */
+    max-width: 90%;
+  }
 }
+
 
 /* ---------------------------
    TOOLTIPY - CHMURKI
@@ -627,7 +638,7 @@ body {
 
 .pricing {
   padding: 4rem 0;
-  background: var(--color-white);
+  background: var(--color-white;
 }
 
 .price-section {
