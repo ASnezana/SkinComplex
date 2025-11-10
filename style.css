@@ -1168,7 +1168,7 @@ body {
   }
 
  /* INFO BOXES – MOBILKI*/
-@
+
   .info__container {
     flex-direction: column;        /* każdy box w osobnym wierszu */
     align-items: center;           /* wyśrodkowanie poziome całej kolumny */
