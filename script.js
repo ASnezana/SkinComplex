@@ -81,3 +81,30 @@ backToTop.addEventListener("click", () => {
   });
 });
 
+/* ==========================
+   LIGHTBOX DO GALERII
+========================== */
+
+ const lightbox = document.getElementById('lightbox');
+  const lightboxImage = lightbox.querySelector('img');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const galleryImages = document.querySelectorAll('.gallery__grid img');
+
+  // Otwieranie lightboxa
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.classList.add('active');
+      lightboxImage.src = img.src;
+      lightboxImage.alt = img.alt;
+    });
+  });
+
+  // Zamknięcie po kliknięciu X lub tła
+  lightboxClose.addEventListener('click', (e) => {
+    e.stopPropagation(); // żeby kliknięcie w X nie liczyło się jako kliknięcie w tło
+    lightbox.classList.remove('active');
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });

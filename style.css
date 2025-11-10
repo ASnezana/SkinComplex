@@ -30,7 +30,7 @@
 
   --color-plum:/* #325094; */#05668D;
   --color-blue: #c2e9ff;
-  --color-cream: /*#fdf8f3;  #f7f2ed; */ #c1e4f5;  /*  błekitny */
+  --color-light-blue: /*#fdf8f3;  #f7f2ed; */ #c1e4f5;  /*  błekitny */
   --color-accent: /*#FF8A8B; */#9DDC57;
   --color-white: #ffffff;
   --color-gray: #666;
@@ -100,7 +100,7 @@ html {
 --------------------------- */
 
 body {
-  background-color: var(--color-cream);
+  background-color: var(--color-light-blue); 
   color: var(--color-plum);
   line-height: 1.6;
   overflow-x: hidden; /* zapobiega poziomemu przewijaniu */
@@ -147,13 +147,15 @@ body {
   height: 80px;
 }
 
-/*.header__logo-name img {
-  height: 80px;
-} */
-
 .header__logo-name h1 {
   font-family: 'Montserrat', sans-serif;
-  color: var(--color-plum);
+
+  /*background: linear-gradient(90deg, #05668D, #00A896, #68DE7E, #D1D930);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Chrome, Safari */
+ /* background-clip: text; /* Firefox */
+
+
   font-size: 2rem;
   margin-left: 10px;
   font-weight: 600;
@@ -481,7 +483,7 @@ body {
    SERVICES
 --------------------------- */
 .services {
-  background: var(--color-cream);
+  background: var(--color-light-blue);
   padding: 4rem 0;
 }
 
@@ -639,6 +641,64 @@ body {
   transform: scale(1.03);
 }
 
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  max-height: 90vh;
+  border-radius: 8px;
+  object-fit: contain;
+  animation: zoomIn 0.3s ease;
+}
+
+/* PRZYCISK X */
+.lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.2s ease;
+}
+
+.lightbox__close:hover {
+  transform: scale(1.2);
+}
+
+/* Animacja */
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
 /* ---------------------------
    PRICING
 --------------------------- */
@@ -705,7 +765,7 @@ body {
 }
 
 .price-section .container {
-  background: var(--color-cream);
+  background: var(--color-light-blue);
   border-radius: 8px;
   box-shadow: var(--shadow);
   padding: 2rem;
