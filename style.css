@@ -483,7 +483,8 @@ body {
    SERVICES
 --------------------------- */
 .services {
-  background: var(--color-light-blue);
+ /* background: var(--color-light-blue); */
+ background: linear-gradient(135deg, #05668D, #00A896, #68DE7E, #D1D930); 
   padding: 4rem 0;
 }
 
@@ -507,11 +508,14 @@ body {
 
 /* Kafelek */
 .service {
+  /* background: linear-gradient(135deg, #05668D, #00A896, #68DE7E, #D1D930); */
   background: var(--color-1-bright);
   padding: 2rem 1rem;
-  border-radius: 8px; 
-  box-shadow: var(--shadow);
-  transition: var(--transition);
+  border-radius: 12px;
+  box-shadow:
+    0 6px 15px rgba(0, 0, 0, 0.25),
+    0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   cursor: pointer;
 }
