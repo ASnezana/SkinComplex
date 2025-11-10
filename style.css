@@ -115,6 +115,11 @@ body {
   margin: 0 auto;
 }
 
+#home {
+  scroll-margin-top: 70px; 
+}
+
+
 .section-title {
   text-align: center;
   font-size: 2rem;
@@ -1009,6 +1014,7 @@ body {
     width: 94%;
   }
 
+
   h2.section-title {
     font-size: 1.5rem;
   }
@@ -1077,6 +1083,25 @@ body {
 .header__toggle.open i {
   transform: rotate(90deg); /* X obraca się o 90 stopni */
 }
+ /* Scroll-margin-top dla sekcji, żeby nie zasłaniał ich nav-bar / phone-bar, oprócz #home które ma być widoczne z phone-bar  */
+  #about,
+  #services,
+  #gallery,
+  #pricing,
+  #contact ,
+  #oprawa-oczu,
+  #dłonie,
+  #stopy,
+  #twarz,
+  #woskowanie,
+  #podologia,
+  #makijaz,
+  #ipl-fotodepilacja,
+  #kosmetologia-estetyczna {
+    scroll-margin-top:  -30px;
+  }
+
+
 
   /* HERO */
   .hero {
