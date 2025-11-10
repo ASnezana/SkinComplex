@@ -484,7 +484,7 @@ body {
 --------------------------- */
 .services {
  /* background: var(--color-light-blue); */
- background: linear-gradient(135deg, #05668D, #00A896, #68DE7E, #D1D930); 
+ background: linear-gradient(135deg, #05668D, #00A896, #68DE7E); 
   padding: 4rem 0;
 }
 
@@ -532,7 +532,8 @@ body {
 }
 
 .service:hover {
-  background: var(--color-accent);
+  /*background: var(--color-accent); */
+  background: linear-gradient(135deg, #9DDC57,#D1D930,#FBFFB1); 
   color: var(--color-white);
   transform: translateY(-5px);
 }
