@@ -1,20 +1,38 @@
 /* ==========================
-   HAMBURGER MENU
+   HAMBURGER MENU - płynna animacja obrotu
 ========================== */
 const toggleBtn = document.querySelector('.header__toggle');
 const navList = document.querySelector('.nav__list');
+const navLinks = document.querySelectorAll('.nav__list a');
 
 toggleBtn.addEventListener('click', () => {
-  navList.classList.toggle('active');
-  // animacja hamburgera (zmiana ikony)
-  toggleBtn.classList.toggle('open');
+  navList.classList.toggle('active');         // pokaz/ukryj menu
+  toggleBtn.classList.toggle('open');         // klasa open dla animacji
+
   const icon = toggleBtn.querySelector('i');
   if (toggleBtn.classList.contains('open')) {
-    icon.classList.replace('fa-bars', 'fa-xmark');
+    icon.classList.replace('fa-bars', 'fa-xmark');  // hamburger → X
   } else {
-    icon.classList.replace('fa-xmark', 'fa-bars');
+    icon.classList.replace('fa-xmark', 'fa-bars');  // X → hamburger
+    icon.style.transform = 'rotate(-90deg)';        // obrót w przeciwną stronę
+    setTimeout(() => { icon.style.transform = 'rotate(0deg)'; }, 10); 
+    // reset transform po małym delay, żeby CSS mógł animować ponownie
   }
 });
+
+// Zamknięcie menu po kliknięciu w link
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navList.classList.remove('active');
+    toggleBtn.classList.remove('open');
+    const icon = toggleBtn.querySelector('i');
+    icon.classList.replace('fa-xmark', 'fa-bars');
+    icon.style.transform = 'rotate(0deg)';  // reset transform
+  });
+});
+
+
+
 
 
 /* ==========================
