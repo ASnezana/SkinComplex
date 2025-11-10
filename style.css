@@ -118,7 +118,7 @@ body {
 .section-title {
   text-align: center;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 2rem;
   margin-bottom: 2rem;
   color: var(--color-plum);
@@ -514,6 +514,12 @@ body {
   cursor: pointer;
 }
 
+.service p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .service img {
   height: 60px;
   margin-bottom: 0.5rem;
@@ -651,6 +657,7 @@ body {
 .price-title {
   color: var(--color-plum);
   font-size: 1.6rem;
+  font-weight: 500;
   margin-bottom: 1.5rem;
 }
 
