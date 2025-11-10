@@ -188,6 +188,7 @@ body {
 
 
 
+
 .nav__list li:last-child a {
   background-color: var(--color-accent); /* różowe tło dla „Kontakt” */
   color: var(--color-white);           /* kontrastowy tekst */
@@ -483,8 +484,8 @@ body {
    SERVICES
 --------------------------- */
 .services {
- /* background: var(--color-light-blue); */
- background: linear-gradient(135deg, #05668D, #00A896, #68DE7E); 
+ background: var(--color-light-blue);
+ /* background: linear-gradient(135deg, #05668D, #00A896, #68DE7E);  */
   padding: 4rem 0;
 }
 
@@ -1063,6 +1064,7 @@ body {
     width: 100%;
     padding: 1rem 0;
     text-align: center;
+    font-size: 1.2rem;
   }
 
    /* Animacja X */
