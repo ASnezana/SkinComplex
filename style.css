@@ -10,17 +10,17 @@
 :root {
 
 /*kolory Ania*/
- --color-1:#05668D;
+ --color-1:#05668D; /*ciemny lazurowy -TAK*/
  --color-2:#028090;
  --color-3:#019493;
  --color-4:#00A896;
  --color-5:#01C3A3;
  --color-6:#02DEAF;
- --color-7:#68DE7E;
+ --color-7:#68DE7E; /*light green -TAK*/
  --color-8:#9DDC57;
- --color-9:#D1D930;
- --color-10:#FBFFB1;
- --color-11:#325094; /*kolor tła kwiatka-logo */
+ --color-9A:#D1D930; /*pear -TAK*/
+ --color-10A:#FBFFB1; /*mindaro -TAK*/
+ 
  --color-1-bright:#E6F4FB; /*jasny błękitny do tabelki cennika na zmiane z błekitnym*/
  --color-1-more-bright:#D4EDF9; /*jeszcze jaśniejszy błękitny do tabelki cennika*/
  
@@ -32,7 +32,8 @@
   --color-blue: #c2e9ff;
   --color-light-blue: /*#fdf8f3;  #f7f2ed; */ #c1e4f5;  /*  błekitny */
   --color-accent: /*#FF8A8B; */#9DDC57;
-  --color-white: #ffffff;
+  --color-white: #ffffff; /* biały -TAK*/
+  --color-black: #000; /* czarny -TAK*/
   --color-gray: #666;
   --max-width: 1200px;
   --transition: all 0.3s ease;
