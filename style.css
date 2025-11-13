@@ -189,10 +189,11 @@ body {
   align-items: center;         /* centrowanie pionowe tekstu */
   justify-content: center;     /* centrowanie poziome (jeśli chcesz) */
   height: 40px;                /* stała wysokość wszystkich linków */
-  padding: 0 1rem;             /* poziome odstępy wewnątrz linku */
+  padding: 0 0.25rem;             /* poziome odstępy wewnątrz linku */
   text-decoration: none;
+  line-height: 1.2; 
   color: var(--color-10); /*FBFFB1*/
-  font-weight: 500;
+  font-weight: 400;
   transition: var(--transition);
   font-family: 'Montserrat', sans-serif;
 
