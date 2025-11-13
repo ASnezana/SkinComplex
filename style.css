@@ -18,8 +18,8 @@
  --color-6:#02DEAF;
  --color-7:#68DE7E; /*light green -TAK*/
  --color-8:#9DDC57;
- --color-9A:#D1D930; /*pear -TAK*/
- --color-10A:#FBFFB1; /*mindaro -TAK*/
+ --color-9:#D1D930; /*pear -TAK*/
+ --color-10:#FBFFB1; /*mindaro -TAK*/
  
  --color-1-bright:#E6F4FB; /*jasny błękitny do tabelki cennika na zmiane z błekitnym*/
  --color-1-more-bright:#D4EDF9; /*jeszcze jaśniejszy błękitny do tabelki cennika*/
@@ -134,7 +134,7 @@ body {
    HEADER + NAV
 --------------------------- */
 .header {
-  background: var(--color-white);
+  background: var(--color-1); /*ciemny lazurowy*/
   box-shadow: var(--shadow);
   position: sticky;
   top: 0;
@@ -149,22 +149,33 @@ body {
   padding: 1rem 0; 
 }
 
+.header__logo-content {
+  display: flex;
+  align-items: center;
+
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+
+
 .header__logo img {
   height: 80px;
+  width: auto;
 }
 
 .header__logo-name h1 {
   font-family: 'Montserrat', sans-serif;
-
+  color :var(--color-10); /*FBFFB1*/
   /*background: linear-gradient(90deg, #05668D, #00A896, #68DE7E, #D1D930);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; /* Chrome, Safari */
  /* background-clip: text; /* Firefox */
-
-
-  font-size: 2rem;
-  margin-left: 10px;
-  font-weight: 600;
+  margin: 0;
+  font-weight: 650;
 }
 
 .nav__list {
@@ -180,11 +191,11 @@ body {
   height: 40px;                /* stała wysokość wszystkich linków */
   padding: 0 1rem;             /* poziome odstępy wewnątrz linku */
   text-decoration: none;
-  color: var(--color-plum);
+  color: var(--color-10); /*FBFFB1*/
   font-weight: 500;
   transition: var(--transition);
   font-family: 'Montserrat', sans-serif;
- /* border-radius: 5px;          /* zaokrąglone rogi dla linków, opcjonalnie */
+
 }
 
 
@@ -196,12 +207,12 @@ body {
 
 
 .nav__list li:last-child a {
-  background-color: var(--color-accent); /* różowe tło dla „Kontakt” */
-  color: var(--color-white);           /* kontrastowy tekst */
+  background-color: var(--color-9); /* mindaro tło dla „Kontakt” */
+  color: var(--color-1);           /* kontrastowy tekst */
 }
 
 .nav__list li:last-child a:hover {
-  background-color: var(--color-plum); /* zmiana tła przy hover */
+  background-color: var(--color-10); /* zmiana tła przy hover */
 }
 
 
@@ -215,10 +226,19 @@ body {
   cursor: pointer;
 }
 
+/*---------------------------
+  COLOR BAR
+---------------------------*/
+
+.color-bar{
+  background: var(--color-7);
+  padding: 1.2rem 0; /*szerokość paska*/
+}
+
 /* ---------------------------
    PHONE BAR
 --------------------------- */
-.phone-bar {
+/* .phone-bar {
   background: var(--color-plum);
   padding: 0.6rem 0;
 }
@@ -246,7 +266,7 @@ body {
 }
 .phone-number {
   font-weight: 400;
-}
+} */
 
 
 
