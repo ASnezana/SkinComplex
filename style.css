@@ -101,7 +101,7 @@ html {
 --------------------------- */
 
 body {
-  background-color: var(--color-light-blue); 
+  background-color: var(--color-10); 
   color: var(--color-plum);
   line-height: 1.6;
   overflow-x: hidden; /* zapobiega poziomemu przewijaniu */
@@ -222,7 +222,7 @@ body {
   display: none;
   background: none;
   border: none;
-  color: var(--color-plum);
+  color: var(--color-9);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -417,12 +417,16 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .about__text {
-  flex: 1 1 45%;
-  text-align: center;
+  display: flex;            /* aktywuje Flexbox */
+  flex-direction: column;   /* układa elementy w kolumnie (w pionie) */
+  justify-content: flex-start; /* przykleja zawartość do góry kontenera */
+  text-align: justify;      /* justowanie tekstu */
+  flex: 1 1 45%;   /* jeśli używasz flex w szerszym layoucie */
+  margin-bottom: 4rem;      /* odstęp na dole dla małych ekranów */   
 }
 
 .about__text p {
@@ -447,6 +451,7 @@ body {
   width: 100vw; /* pełna szerokość okna */
   height: 80vh; /* możesz dostosować wysokość */
   margin-top: 2rem; /* odstęp od poprzedniej części */
+  text-align: center;      /* wyśrodkowuje zarówno h3, jak i h2 */
   background-image: url('images/tapeta.jpg'); /* zmień na swoją ścieżkę */
   background-size: cover;
   background-position: center;
@@ -455,6 +460,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.about__quote-content {
+  position: relative;
+ text-align: center;
+  z-index: 2;
 }
 
 /* Przyciemniona nakładka */
@@ -493,12 +504,25 @@ body {
   position: relative;
   color:var(--color-white);
   font-style: italic;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
   z-index: 2;
   text-align: center;
   padding: 0 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+.about__quote-author {
+  position: relative;
+  margin: 0 0 15px 0;  
+  color:var(--color-white);
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  z-index: 2;
+  text-align: center;
+  margin-top: 1rem;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -945,11 +969,11 @@ body {
 
 /* -------------------------------------------
    RESPONSYWNOŚĆ CAŁEJ STRONY - KOMENTARZE
-   Desktop ≥1025px | Tablet 600–1024px | Mobile ≤599px
+   Desktop ≥1025px | Tablet 769–1024px | Mobile i small tablet ≤768px
 ------------------------------------------- */
 
 /* =========================
-   TABLETY (600–1024px)
+   TABLETY (769–1024px)
 ========================= */
 @media (max-width: 1024px) {
 
@@ -1011,9 +1035,9 @@ body {
 }
 
 /* =========================
-   MOBILKI (≤599px)
+   MOBILKI (≤768px)
 ========================= */
-@media (max-width: 599px) {
+@media (max-width: 768px) {
 
   /* OGÓLNE */
   body {
@@ -1056,6 +1080,10 @@ body {
     position: relative;
     z-index: 2000;
     transition: transform 0.3s ease;
+  }
+
+  .header__nav {
+    background-color: #05668D; /*ciemny lazurowy*/
   }
 
   .nav__list {
