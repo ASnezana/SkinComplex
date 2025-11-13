@@ -184,7 +184,7 @@ body {
   font-weight: 500;
   transition: var(--transition);
   font-family: 'Montserrat', sans-serif;
-  border-radius: 5px;          /* zaokrąglone rogi dla linków, opcjonalnie */
+ /* border-radius: 5px;          /* zaokrąglone rogi dla linków, opcjonalnie */
 }
 
 
@@ -328,7 +328,6 @@ body {
 .info__box:nth-child(1) {
   background-color: var(--color-plum); /* fiolet */
   color:var(--color-white);
-  border-radius: 10px;
   padding: 1rem;
 }
 
@@ -336,7 +335,6 @@ body {
 .info__box:nth-child(2) {
   background-color: var(--color-accent); /* róż */
   color: var(--color-white);
-  border-radius: 10px;
   padding: 1rem;
 }
 
@@ -344,7 +342,6 @@ body {
 .info__box:nth-child(3) {
   background-color: var(--color-plum); /* fiolet */
   color: var(--color-white);
-  border-radius: 10px;
   padding: 1rem;
 }
 
@@ -420,7 +417,6 @@ body {
 
 .about__image img {
   width: 100%;
-  border-radius: 8px;
   box-shadow: var(--shadow);
 }
 
@@ -518,7 +514,6 @@ body {
   /* background: linear-gradient(135deg, #05668D, #00A896, #68DE7E, #D1D930); */
   background: var(--color-1-bright);
   padding: 2rem 1rem;
-  border-radius: 12px;
   box-shadow:
     0 6px 15px rgba(0, 0, 0, 0.25),
     0 10px 30px rgba(0, 0, 0, 0.15);
@@ -644,7 +639,6 @@ body {
 
 .gallery__grid img {
   width: 100%;
-  border-radius: 8px;
   box-shadow: var(--shadow);
   transition: var(--transition);
 }
@@ -681,7 +675,6 @@ body {
   height: auto;
   max-width: 600px;
   max-height: 90vh;
-  border-radius: 8px;
   object-fit: contain;
   animation: zoomIn 0.3s ease;
 }
@@ -772,13 +765,11 @@ body {
   margin: 0 auto;
   border-collapse: collapse;
   font-size: 1rem;
-  border-radius: 8px;
   overflow: hidden;
 }
 
 .price-section .container {
   background: var(--color-light-blue);
-  border-radius: 8px;
   box-shadow: var(--shadow);
   padding: 2rem;
   max-width: 700px;
@@ -803,7 +794,6 @@ body {
   overflow: hidden;
   max-width: 100%;
   margin: 0 auto; /* wyśrodkowanie */
-  border-radius: 10px; /* opcjonalnie ładne zaokrąglenia */
 }
 
 .map-responsive iframe {
@@ -1058,7 +1048,6 @@ body {
   background: var(--color-white);
   box-shadow: var(--shadow);
   padding-top: 4rem;     /* odstęp od góry headera */
-  border-radius: 10px;
   transition: right 0.3s ease;
   z-index: 1500;
 }
@@ -1181,8 +1170,7 @@ body {
 
   /* Tabela cennika */
   .price-table {
-    font-size: 0.9rem;          /* dopasowane do mobilków */
-    border-radius: 8px;         /* zachowujemy zaokrąglenia */
+    font-size: 0.9rem;          /* dopasowane do mobilków */       
     overflow: hidden;
     width: 100%;                /* pełna szerokość kontenera */
   }
@@ -1224,7 +1212,7 @@ body {
 
   /* MAPA */
   .map-responsive {
-    border-radius: 6px;
+    padding-bottom: 75%; /* bardziej pionowy aspekt dla małych ekranów */
   }
 
   /* KONTAKT - IKONY NAD TEKSTEM */
