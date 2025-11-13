@@ -216,6 +216,10 @@ body {
   background-color: var(--color-10); /* zmiana tła przy hover */
 }
 
+.nav__list.active {
+  background-color: var(--color-1); 
+}
+
 
 /* Hamburger */
 .header__toggle {
@@ -531,7 +535,7 @@ body {
    SERVICES
 --------------------------- */
 .services {
- background: var(--color-light-blue);
+ background: var(--color-7);
  /* background: linear-gradient(135deg, #05668D, #00A896, #68DE7E);  */
   padding: 4rem 0;
 }
@@ -557,7 +561,7 @@ body {
 /* Kafelek */
 .service {
   /* background: linear-gradient(135deg, #05668D, #00A896, #68DE7E, #D1D930); */
-  background: var(--color-1-bright);
+  background: var(--color-10);
   padding: 2rem 1rem;
   box-shadow:
     0 6px 15px rgba(0, 0, 0, 0.25),
@@ -579,22 +583,9 @@ body {
 }
 
 .service:hover {
-  /*background: var(--color-accent); */
-  background: linear-gradient(135deg, #9DDC57,#D1D930,#FBFFB1); 
-  color: var(--color-white);
   transform: translateY(-5px);
 }
 
-.service:hover,
-.service:hover p,
-.service:hover i {
-  color: var(--color-white);
-}
-
-/*.service:hover img {
-  filter: brightness(0) invert(1);
-  transition: filter 0.3s ease;
-} */
 
 /* --- RWD --- */
 @media (max-width: 768px) {
@@ -626,7 +617,6 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
   white-space: normal; /* pozwala na zawijanie tekstu */
   word-wrap: break-word; /* łamanie długich słów */
   max-width: 240px; /* maksymalna szerokość chmurki */
