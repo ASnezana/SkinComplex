@@ -495,9 +495,9 @@ body {
 
  background: linear-gradient(
   rgba(0, 0, 0, 0.8) 0%, /* GÓRA — najciemniej */
-  rgba(0, 0, 0, 0.55) 30%,
-  rgba(0, 0, 0, 0.25) 50%,
-  rgba(0, 0, 0, 0.1) 70% /* DÓŁ — prawie jasno */
+  rgba(0, 0, 0, 0.55) 50%,
+  rgba(0, 0, 0, 0.25) 70%,
+  rgba(0, 0, 0, 0.1) 90% /* DÓŁ — prawie jasno */
 );
 
 }
@@ -1180,9 +1180,10 @@ body {
 
   /* GALLERY */
   .gallery__grid {
-    grid-template-columns: 1fr;
+   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 
+  
 
   /* CENNIK */
   /* Sekcja cennika */
