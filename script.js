@@ -108,3 +108,27 @@ backToTop.addEventListener("click", () => {
   lightbox.addEventListener('click', () => {
     lightbox.classList.remove('active');
   });
+
+/* ==========================
+    AKORDEON W CENNIKU
+========================== */
+
+document.querySelectorAll('.accordion-toggle').forEach(button => {
+  button.addEventListener('click', () => {
+    // opcjonalnie: zamykanie innych sekcji
+    document.querySelectorAll('.accordion-toggle').forEach(btn => {
+      if(btn !== button) btn.classList.remove('active');
+    });
+    document.querySelectorAll('.accordion-content').forEach(content => {
+      if(content !== button.nextElementSibling) content.style.display = 'none';
+    });
+
+    // otwiera/zamyka aktualną sekcję
+    const content = button.nextElementSibling;
+    const isActive = button.classList.toggle('active');
+    content.style.display = isActive ? 'block' : 'none';
+  });
+});
+/* ==========================
+   KONIEC PLIKU
+========================== */
