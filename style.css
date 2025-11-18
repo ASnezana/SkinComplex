@@ -351,7 +351,7 @@ body {
 
 /* 1 box – fioletowy */
 .info__box:nth-child(1) {
-  background-color: var(--color-plum); /* fiolet */
+  background-color: var(--color-7); /* fiolet */
   color:var(--color-white);
   padding: 1rem;
 }
