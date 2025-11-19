@@ -999,7 +999,7 @@ body {
 /* =========================
    TABLETY (769–1024px)
 ========================= */
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px){
 
   /* OGÓLNE */
   body {
@@ -1039,9 +1039,29 @@ body {
   }
 
   /* CENNIK */
-  .price-table {
-    font-size: 0.95rem;
+ .accordion-toggle {
+    padding: 0.9rem 1.5rem; /* lekko mniejsze niż desktop */
   }
+
+  .accordion-toggle .price-title {
+    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+    line-height: clamp(1.4rem, 3vw, 1.5rem);
+  }
+
+  .accordion-arrow {
+    font-size: 1.1rem;
+  }
+
+  .price-table td {
+    padding: 0.7rem 0.9rem;
+    font-size: clamp(0.85rem, 2vw, 1.1rem);
+    line-height: clamp(1.05rem, 2.5vw, 1.3rem);
+  }
+
+  .price-table td:first-child {
+    padding-left: 1.5rem;
+  }
+
 
   /* GALERIA */
   .gallery__grid {
@@ -1220,40 +1240,31 @@ body {
   
 
   /* CENNIK */
-  /* Sekcja cennika */
- .pricing {
-    padding: 1rem  0;
+   .accordion-toggle {
+    padding: 0.8rem 1rem; /* mniejsze paddingi na mobile */
   }
 
-  .price-section {
-    padding: 2rem 0 1rem;       /* zmniejszamy górny i dolny padding sekcji */
+  .accordion-toggle .price-title {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+    line-height: clamp(1.2rem, 4.5vw, 1.4rem);
   }
 
-  /* Tytuł sekcji */
-  .price-title {
-    font-size: 1.4rem;          /* mniejszy font na telefonach */
-    margin-bottom: 1rem;        /* zmniejszamy odstęp między tytułem a tabelą */
+  .accordion-arrow {
+    font-size: 1rem;
   }
 
-  /* Kontener tabeli */
-  .price-section .container {
-    padding: 1rem;              /* mniejszy padding wewnątrz kontenera */
-    margin-bottom: 1.5rem;      /* minimalny odstęp od kolejnych sekcji */
-    max-width: 100%;            /* zajmuje całą szerokość w mobilkach */
-  }
-
-  /* Tabela cennika */
-  .price-table {
-    font-size: 0.9rem;          /* dopasowane do mobilków */       
-    overflow: hidden;
-    width: 100%;                /* pełna szerokość kontenera */
-  }
-
-  /* Komórki tabeli */
-  .price-table th,
   .price-table td {
-    padding: 0.6rem 0.8rem;     /* zmniejszone paddingi, żeby tabela była bardziej zwarta */
+    padding: 0.6rem 0.8rem;
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+    line-height: clamp(1rem, 4vw, 1.2rem);
   }
+
+  .price-table td:first-child {
+    padding-left: 1rem;
+  }
+}
+
+
 
  /* INFO BOXES – MOBILKI*/
 
@@ -1312,7 +1323,7 @@ body {
     font-size: 0.9rem;
     padding: 1.2rem 0;
   }
-}
+
 
 /* =========================
    DUŻE DESKTOPOWE EKRANY (≥1440px)
