@@ -750,7 +750,7 @@ body {
   display: none;
   margin: 0;           /* brak odstępów */
   width: 100%;             /* dopasowanie do szerokości przycisku */
-  box-sizing: border-box;   /* uwzględnia padding w szerokości */
+  
   padding: 0;               /* usuwa dodatkowe odstępy */
   
 }
@@ -763,8 +763,8 @@ body {
   text-transform: uppercase; /* wielkie litery */
   text-align: left;        /* wyrównanie do lewej w accordionie */
   letter-spacing: 0.5px;   /* lekko poprawia czytelność */
-   margin: 0;    /* usuwa wszystkie marginesy */
-  padding: 0;   /* usuwa wszystkie paddingi */
+   margin: 0;    
+  padding: 0;   
 }
 
 /* Usuń marginesy między sekcjami */
@@ -775,9 +775,10 @@ body {
 }
 
 /* Usunięcie paddingu w środku sekcji */
-.accordion-section .container {
+.pricing .container {
   padding: 0;
 }
+
 
 
 /* Linia oddzielająca wiersze tabeli w accordionie */
@@ -793,11 +794,6 @@ body {
 }
 
 
-
-/* Ostatni wiersz – opcjonalnie bez dolnej linii */
-.accordion-content .price-table tr:last-child {
-  border-bottom: none;
-}
 
 
 
@@ -830,8 +826,8 @@ body {
 
   text-align: left;
   margin: 0;           /* usuwa marginesy */
- border-top: none;
- border-left: none;
+  border-top: none;
+  border-left: none;
   border-right: none;
   border-bottom: 1px solid #ccc; /* cienka linia  nagłówka */
 }
@@ -859,7 +855,7 @@ body {
 
 
 .accordion-toggle.active .price-title {
-  color: var(--color-plum);
+  color:#666666;       /* zmiana koloru tekstu nagłówka po rozwinięciu */
 
 }
 
@@ -869,6 +865,20 @@ body {
 }
 
 
+.accordion-toggle .price-title{
+  
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25.2px;
+
+}
+
+.price-table td {
+ 
+  font-weight: 400;
+  font-size: 14x;
+  line-height: 21.6px;
+}
 
 
 
