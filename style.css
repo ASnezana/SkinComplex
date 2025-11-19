@@ -7,6 +7,26 @@
   box-sizing: border-box;
 }
 
+
+
+/* Globalny reset linków */
+a {
+  text-decoration: none;           /* usuwa podkreślenie */
+  color: inherit;                  /* zachowuje kolor tekstu */
+  -webkit-text-decoration-skip-ink: none; /* Safari */
+}
+
+/* Reset dla wszystkich stanów */
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  -webkit-text-decoration-skip-ink: none;
+}
+
+
 :root {
 
 /*kolory Ania*/
@@ -47,7 +67,6 @@ html {
   scroll-padding-top: 120px; /* dostosuj do wysokości headera */
   scroll-behavior: smooth;
 }
-
 
 
 
