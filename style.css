@@ -429,7 +429,7 @@ body {
   display: flex;            /* aktywuje Flexbox */
   flex-direction: column;   /* układa elementy w kolumnie (w pionie) */
   justify-content: flex-start; /* przykleja zawartość do góry kontenera */
-  text-align: justify;      /* justowanie tekstu */
+  text-align: center;      /* justowanie tekstu */
   flex: 1 1 45%;   /* jeśli używasz flex w szerszym layoucie */
   margin-bottom: 4rem;      /* odstęp na dole dla małych ekranów */   
 }
