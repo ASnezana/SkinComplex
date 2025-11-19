@@ -739,82 +739,33 @@ body {
   to { transform: scale(1); opacity: 1; }
 }
 
-
 /* ---------------------------
-   PRICE SECTION - ACCORDION  
+   PRICE SECTION - ACCORDION
 --------------------------- */
 
-
-/* Accordion – ukrywanie zawartości */
+/* Ukrycie zawartości accordionu */
 .accordion-content {
   display: none;
-  margin: 0;           /* brak odstępów */
-  width: 100%;             /* dopasowanie do szerokości przycisku */
-  
-  padding: 0;               /* usuwa dodatkowe odstępy */
-  
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Styl nagłówków sekcji accordionu */
-.accordion-toggle .price-title {
-  color: var(--color-plum);         
-  font-size: 1rem;       /* dopasowana wielkość */
-  font-weight: 400;        /* bardziej wyraźne */
-  text-transform: uppercase; /* wielkie litery */
-  text-align: left;        /* wyrównanie do lewej w accordionie */
-  letter-spacing: 0.5px;   /* lekko poprawia czytelność */
-   margin: 0;    
-  padding: 0;   
-}
-
-/* Usuń marginesy między sekcjami */
+/* Sekcje accordionu */
 .accordion-section {
-  margin: 0;           /* usuwa marginesy z zewnątrz */
-  padding: 0;          /* opcjonalnie usuwa padding sekcji */
-  border: none; /* usuwa obramowanie sekcji */
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
-/* Usunięcie paddingu w środku sekcji */
-.pricing .container {
+/* Padding wewnątrz container */
+.pricing .container,
+.accordion-section .container {
   padding: 0;
 }
 
-
-
-/* Linia oddzielająca wiersze tabeli w accordionie */
-.accordion-content .price-table {
-  border-collapse: collapse;
-  border: none; /* usuwa ramkę całej tabeli */
-  width: 100%;
-}
-
-.accordion-content .price-table td {
-  border-bottom: none; /* brak linii */
-  padding: 0.8rem 1rem;
-}
-
-
-
-
-
-.price-table td:last-child {
-  text-align: right;  /* druga kolumna do prawej */
-}
-
-.price-table td:first-child {
-  text-align: left;  /* pierwsza kolumna do lewej */
-    padding-left: 2rem;
-}
-
-
-
-/* Dodanie efektu hover */
-.accordion-content .price-table tr:hover td {
-  background-color: #e8e8e8;
-}
-
-
-/* Styl przycisku */
+/* Nagłówki przycisków accordionu */
 .accordion-toggle {
   display: flex;
   justify-content: space-between;
@@ -823,64 +774,75 @@ body {
   background: var(--color-10);
   padding: 1rem 2rem;
   cursor: pointer;
-
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
   text-align: left;
-  margin: 0;           /* usuwa marginesy */
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid #ccc; /* cienka linia  nagłówka */
 }
 
+.accordion-toggle .price-title {
+  color: var(--color-plum);
+  font-weight: 500;
+  font-size: clamp(1rem, 2.2vw, 1.3rem); /* responsywne skalowanie */
+  line-height: clamp(1.25rem, 2.6vw, 1.575rem);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+}
 
-
+/* Strzałka */
 .accordion-arrow {
   font-size: 1.2rem;
-  color:var(--color-plum);
+  color: var(--color-plum);
   transition: transform 0.3s ease;
 }
 
-/* Klasa dla rozwiniętego stanu */
+/* Aktywny stan (po rozwinięciu) */
 .accordion-toggle.active + .accordion-content {
   display: block;
 }
-
-/* Linie między wierszami tylko gdy accordion jest rozwinięty */
-.accordion-toggle.active + .accordion-content .price-table td {
-  border-bottom: 1px solid #ccc;
-}
-
-
-
-
-
-.accordion-toggle.active .price-title {
-  color:#666666;       /* zmiana koloru tekstu nagłówka po rozwinięciu */
-
-}
-
 
 .accordion-toggle.active .accordion-arrow {
   transform: rotate(180deg);
 }
 
+.accordion-toggle.active .price-title {
+  color: #CABFB2; 
+}
 
-.accordion-toggle .price-title{
-  
-  font-weight: 500;
-  font-size: 21px;
-  line-height: 25.2px;
-
+/* Tabela usług */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
 }
 
 .price-table td {
- 
+  padding: 0.8rem 1rem;
   font-weight: 400;
-  font-size: 14x;
-  line-height: 21.6px;
+  font-size: clamp(0.875rem, 1.8vw, 1.2rem);
+  line-height: clamp(1.1rem, 2.0vw, 1.35rem);
 }
 
+.price-table td:first-child {
+  text-align: left;
+  padding-left: 2rem;
+}
 
+.price-table td:last-child {
+  text-align: right;
+}
+
+/* Hover dla wierszy tabeli */
+.accordion-content .price-table tr:hover td {
+  background-color:#fafcd6;
+}
+
+/* Linie między wierszami tylko gdy accordion rozwinięty */
+.accordion-toggle.active + .accordion-content .price-table td {
+  border-bottom: 1px solid #ccc;
+}
 
 
 
