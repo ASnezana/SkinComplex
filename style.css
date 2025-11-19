@@ -761,7 +761,6 @@ body {
   font-size: 1rem;       /* dopasowana wielkość */
   font-weight: 400;        /* bardziej wyraźne */
   text-transform: uppercase; /* wielkie litery */
-  margin: 0;               /* usuwa dodatkowe marginesy w accordionie */
   text-align: left;        /* wyrównanie do lewej w accordionie */
   letter-spacing: 0.5px;   /* lekko poprawia czytelność */
    margin: 0;    /* usuwa wszystkie marginesy */
@@ -769,23 +768,15 @@ body {
 }
 
 /* Usuń marginesy między sekcjami */
-.price-section .accordion-section {
+.accordion-section {
   margin: 0;           /* usuwa marginesy z zewnątrz */
   padding: 0;          /* opcjonalnie usuwa padding sekcji */
-}
-
-.price-section .container {
-  padding: 0;  /* usuwa odstępy w środku */
-}
-
-.price-section .accordion-section {
   border: none; /* usuwa obramowanie sekcji */
 }
 
-/* Usuń marginesy przycisku nagłówka */
-.accordion-toggle {
-  margin: 0;           /* usuwa marginesy */
-  border-bottom: 1px solid #ccc; /* cienka linia między nagłówkami*/
+/* Usunięcie paddingu w środku sekcji */
+.accordion-section .container {
+  padding: 0;
 }
 
 
@@ -839,6 +830,10 @@ body {
 
   text-align: left;
   margin: 0;           /* usuwa marginesy */
+ border-top: none;
+ border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #ccc; /* cienka linia  nagłówka */
 }
 
 
@@ -861,12 +856,6 @@ body {
 
 
 
-/* Usuń obramowania całej tabeli */
-.accordion-content .price-table {
-  border: none;           /* usuwa border wokół tabeli */
-  border-collapse: collapse;
-  width: 100%;
-}
 
 
 .accordion-toggle.active .price-title {
@@ -878,7 +867,6 @@ body {
 .accordion-toggle.active .accordion-arrow {
   transform: rotate(180deg);
 }
-
 
 
 
