@@ -703,7 +703,25 @@ body {
   transform: scale(1.03);
 }
 
+/* Lightbox - minimalistyczny wygląd */
 
+/* Usuwa tło i padding kontenera */
+.lightbox, 
+.lb-outerContainer, 
+.lb-container
+.lb-dataContainer {
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Usuwa border i zaokrąglenia obrazka */
+.lb-image {
+  border-radius: 0 !important;
+  background: none !important;
+  /*border: none !important; */ /* odkomentuj, jeśli chcesz usunąć biały border */
+}
 
 
 
