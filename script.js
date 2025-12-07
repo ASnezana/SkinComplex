@@ -18,6 +18,9 @@ toggleBtn.addEventListener('click', () => {
     setTimeout(() => { icon.style.transform = 'rotate(0deg)'; }, 10); 
     // reset transform po małym delay, żeby CSS mógł animować ponownie
   }
+
+  toggleBtn.setAttribute('aria-expanded', toggleBtn.classList.contains('open')); // aktualizacja atrybutu aria
+
 });
 
 // Zamknięcie menu po kliknięciu w link
