@@ -187,16 +187,17 @@ body {
   width: auto;
 }
 
-.header__logo-name h1 {
-  font-family: 'Montserrat', sans-serif;
-  color :var(--color-10); /*FBFFB1*/
-  /*background: linear-gradient(90deg, #05668D, #00A896, #68DE7E, #D1D930);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* Chrome, Safari */
- /* background-clip: text; /* Firefox */
-  margin: 0;
-  font-weight: 650;
+.logo-text {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-10); /* FBFFB1 */
+    font-size: 2rem;        /* 32px */
+    font-weight: 650;
+    height: 3.2rem;         /* 51.2px */
+    line-height: 3.2rem;    /* 51.2px */
+    margin: 0;
 }
+
+
 
 .nav__list {
   display: flex;
@@ -1009,6 +1010,12 @@ body {
     justify-content: space-between;
   }
 
+  .logo-text {
+        font-size: 1.75rem;   /* ~28px */
+        height: 2.8rem;       /* ~44.8px */
+        line-height: 2.8rem;  /* ~44.8px */
+    }
+
   .nav__list {
     gap: 1rem;                /* zmniejszamy odstęp między linkami */
   }
@@ -1108,9 +1115,14 @@ body {
   .header__logo img {
     height: 60px;
   }
-  .header__logo-name h1 {
-    font-size: 1.5rem;
-  }
+  
+  .logo-text {
+        font-size: 1.5rem;    /* 24px */
+        height: 2.4rem;       /* 38.4px */
+        line-height: 2.4rem;  /* 38.4px */
+    }
+  
+
  .header__toggle { /* Hamburger – zawsze widoczny na mobilkach */
     display: block;
     position: relative;
