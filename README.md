@@ -190,11 +190,12 @@ Responsywna, nowoczesna i przyjazna dla użytkownika, z wieloma interaktywnymi s
 ---
 
 ## 📂 Struktura Plików
-/index.html
-/css/style.css
-/js/script.js
-/images/
-/README.md
+/index.html  
+/css/style.css  
+/js/script.js  
+/images/  
+/README.md  
+
 
 ---
 
