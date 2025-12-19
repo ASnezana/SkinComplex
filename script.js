@@ -1,41 +1,35 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 /* ==========================
-   HAMBURGER MENU - płynna animacja obrotu
+   HAMBURGER MENU
 ========================== */
 const toggleBtn = document.querySelector('.header__toggle');
 const navList = document.querySelector('.nav__list');
 const navLinks = document.querySelectorAll('.nav__list a');
+const icon = toggleBtn.querySelector('i');
 
 toggleBtn.addEventListener('click', () => {
-  navList.classList.toggle('active');         // pokaz/ukryj menu
-  toggleBtn.classList.toggle('open');         // klasa open dla animacji
+  const isOpen = toggleBtn.classList.toggle('open');
+  navList.classList.toggle('active');
 
-  const icon = toggleBtn.querySelector('i');
-  if (toggleBtn.classList.contains('open')) {
-    icon.classList.replace('fa-bars', 'fa-xmark');  // hamburger → X
+  toggleBtn.setAttribute("aria-expanded", isOpen);
+
+  if (isOpen) {
+    icon.classList.replace("fa-bars", "fa-xmark");
   } else {
-    icon.classList.replace('fa-xmark', 'fa-bars');  // X → hamburger
-    icon.style.transform = 'rotate(-90deg)';        // obrót w przeciwną stronę
-    setTimeout(() => { icon.style.transform = 'rotate(0deg)'; }, 10); 
-    // reset transform po małym delay, żeby CSS mógł animować ponownie
+    icon.classList.replace("fa-xmark", "fa-bars");
   }
-
-  toggleBtn.setAttribute('aria-expanded', toggleBtn.classList.contains('open')); // aktualizacja atrybutu aria
-
 });
 
-// Zamknięcie menu po kliknięciu w link
+// zamykanie po kliknięciu w link
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
     navList.classList.remove('active');
     toggleBtn.classList.remove('open');
-    const icon = toggleBtn.querySelector('i');
-    icon.classList.replace('fa-xmark', 'fa-bars');
-    icon.style.transform = 'rotate(0deg)';  // reset transform
+    toggleBtn.setAttribute("aria-expanded", "false");
+    icon.classList.replace("fa-xmark", "fa-bars");
   });
 });
-
-
-
 
 
 /* ==========================
@@ -43,25 +37,21 @@ navLinks.forEach(link => {
 ========================== */
 const slides = document.querySelectorAll('.hero__slide');
 let currentSlide = 0;
-const slideInterval = 5000; // co 5 sekund
+const interval = 5000;
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('hero__slide--active', i === index);
-  });
+function showSlide(i) {
+  slides.forEach((slide, idx) =>
+    slide.classList.toggle('hero__slide--active', idx === i)
+  );
 }
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}
-
-// Start slidera
 if (slides.length > 0) {
-  showSlide(currentSlide);
-  setInterval(nextSlide, slideInterval);
+  showSlide(0);
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }, interval);
 }
-
 
 
 /* ==========================
@@ -70,41 +60,49 @@ if (slides.length > 0) {
 const backToTop = document.getElementById("backToTop");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    backToTop.classList.add("show");
-  } else {
-    backToTop.classList.remove("show");
-  }
+  backToTop.classList.toggle("show", window.scrollY > 300);
 });
 
 backToTop.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 
 /* ==========================
     AKORDEON W CENNIKU
 ========================== */
-
 document.querySelectorAll('.accordion-toggle').forEach(button => {
+  const content = button.nextElementSibling;
+
+  // ustaw aria
+  button.setAttribute("aria-expanded", "false");
+  content.style.maxHeight = "0px";
+
   button.addEventListener('click', () => {
-    // opcjonalnie: zamykanie innych sekcji
-    document.querySelectorAll('.accordion-toggle').forEach(btn => {
-      if(btn !== button) btn.classList.remove('active');
-    });
-    document.querySelectorAll('.accordion-content').forEach(content => {
-      if(content !== button.nextElementSibling) content.style.display = 'none';
+    const isOpen = button.classList.toggle('active');
+
+    // zamykanie pozostałych sekcji
+    document.querySelectorAll('.accordion-toggle').forEach(other => {
+      if (other !== button) {
+        other.classList.remove('active');
+        other.setAttribute("aria-expanded", "false");
+        other.nextElementSibling.style.maxHeight = "0px";
+      }
     });
 
-    // otwiera/zamyka aktualną sekcję
-    const content = button.nextElementSibling;
-    const isActive = button.classList.toggle('active');
-    content.style.display = isActive ? 'block' : 'none';
+    button.setAttribute("aria-expanded", isOpen);
+
+    if (isOpen) {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = "0px";
+    }
   });
 });
+
+});
+
+
 /* ==========================
    KONIEC PLIKU
 ========================== */
