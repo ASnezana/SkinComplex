@@ -208,7 +208,7 @@ body {
 .nav__list li a {
   display: flex;               /* sprawia, że link jest elastyczny */
   align-items: center;         /* centrowanie pionowe tekstu */
-  justify-content: center;     /* centrowanie poziome (jeśli chcesz) */
+  justify-content: center;     /* centrowanie poziome */
   height: 40px;                /* stała wysokość wszystkich linków */
   padding: 0 0.25rem;             /* poziome odstępy wewnątrz linku */
   text-decoration: none;
@@ -475,10 +475,10 @@ body {
 .about__quote {
   position: relative;
   width: 100vw; /* pełna szerokość okna */
-  height: 80vh; /* możesz dostosować wysokość */
+  height: 80vh; 
   margin-top: 2rem; /* odstęp od poprzedniej części */
   text-align: center;      /* wyśrodkowuje zarówno h3, jak i h2 */
-  background-image: url('images/tapeta.jpg'); /* zmień na swoją ścieżkę */
+  background-image: url('images/tapeta.jpg'); /* tło cytatu */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -558,7 +558,6 @@ body {
 --------------------------- */
 .services {
  background: var(--color-7);
- /* background: linear-gradient(135deg, #05668D, #00A896, #68DE7E);  */
   padding: 4rem 0;
 }
 
@@ -582,7 +581,6 @@ body {
 
 /* Kafelek */
 .service {
-  /* background: linear-gradient(135deg, #05668D, #00A896, #68DE7E, #D1D930); */
   background: var(--color-10);
   padding: 2rem 1rem;
   box-shadow:
@@ -985,7 +983,7 @@ body {
 
 
 /* -------------------------------------------
-   RESPONSYWNOŚĆ CAŁEJ STRONY - KOMENTARZE
+   RESPONSYWNOŚĆ CAŁEJ STRONY 
    Desktop ≥1025px | Tablet 769–1024px | Mobile i small tablet ≤768px
 ------------------------------------------- */
 
@@ -1078,7 +1076,7 @@ body {
 }
 
 /* =========================
-   MOBILKI (≤768px)
+   MOBILE i Small tablet (≤768px)
 ========================= */
 @media (max-width: 768px) {
 
