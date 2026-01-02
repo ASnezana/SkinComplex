@@ -945,7 +945,7 @@ body {
 }
 
 .icon-badge:hover {
-  background: var(--color-accent);
+  background: var(--color-4);
   color: var(--color-plum);
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(97, 67, 121, 0.5);
@@ -978,7 +978,7 @@ body {
 }
 
 .social__icons a:hover {
-  color: var(--color-accent);
+  color: var(--color-4);
 }
 
 /* ---------------------------
