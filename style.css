@@ -1188,7 +1188,7 @@ body {
 
   /* HERO */
   .hero {
-    height: 100vh;             /* krótszy hero na telefonach */
+    height: 100vh;           /* pełna wysokość ekranu na mobilkach */
   }
 
 .hero__slide {
