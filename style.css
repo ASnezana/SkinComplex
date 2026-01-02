@@ -120,7 +120,7 @@ html {
 --------------------------- */
 
 body {
-  background-color: var(--color-10); 
+  background-color: var(--color-7); 
   color: var(--color-plum);
   line-height: 1.6;
   overflow-x: hidden; /* zapobiega poziomemu przewijaniu */
@@ -347,7 +347,7 @@ body {
    INFO BOXES
 --------------------------- */
 .info {
-  background: var(--color-10); 
+  background: var(--color-7); 
   color: var(--color-plum);
   padding: 2rem 0;
 }
@@ -364,9 +364,9 @@ body {
   flex: 1 1 200px;
 }
 
-/* 1 box – fioletowy */
+/* 1 box – zielony */
 .info__box:nth-child(1) {
-  background-color: var(--color-4); /* fiolet */
+  background-color: var(--color-4); /* zielony */
   color:var(--color-white);
   padding: 1rem;
 }
@@ -428,7 +428,8 @@ body {
    ABOUT
 --------------------------- */
 .about {
-  padding: 4rem 0;
+  padding: 4rem 0 0; /* usuń dolny padding żeby pod obrazem nie było żółtego paska */
+  background-color: var(--color-10);
 }
 
 .about__content {
@@ -438,6 +439,8 @@ body {
   flex-wrap: wrap;
   gap: 4rem;
 }
+
+
 
 .about__text {
   display: flex;            /* aktywuje Flexbox */
