@@ -468,8 +468,8 @@ body {
 .about__quote {
   position: relative;
   width: 100vw; /* pełna szerokość okna */
-  height: 80vh; 
-  margin-top: 2rem; /* odstęp od poprzedniej części */
+  min-height: 100vh; /* zajmuje co najmniej cały viewport */
+  margin-top: 3rem; /* odstęp od poprzedniej części    */
   text-align: center;      /* wyśrodkowuje zarówno h3, jak i h2 */
   background-image: url('images/tapeta.jpg'); /* tło cytatu */
   background-size: cover;
