@@ -676,7 +676,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background: var(--color-10);
+  background: var(--color-7);
   padding: 1rem 2rem;
   cursor: pointer;
   margin: 0;
@@ -728,18 +728,19 @@ body {
 .price-table td {
   padding: 0.8rem 1rem;
   font-weight: 400;
-  font-size: clamp(0.875rem, 1.8vw, 1.2rem);
+  font-size: clamp(0.870rem, 1.6vw, 1,2rem);
   line-height: clamp(1.1rem, 2.0vw, 1.35rem);
 }
 
 .price-table td:first-child {
   text-align: left;
-  padding-left: 2rem;
+  padding-left: 3rem; /* nazwa usługi przesunięta bardziej w prawo */
 }
 
 .price-table td:last-child {
   text-align: right;
-}
+  padding-left: 1rem; /* cena mniej przesunięta */
+} 
 
 /* Hover dla wierszy tabeli */
 .accordion-content .price-table tr:hover td {
@@ -773,8 +774,8 @@ body {
 
 /* Visual state for the toggle when its section is targeted */
 .accordion-section:target .accordion-toggle {
-  background-color: var(--color-10);
-  color: var(--color-gray);
+  background-color: var(--color-7);
+  color: var(--color-7);
 }
 
 /* Make sure when navigated to the section it is not hidden under the sticky header */
@@ -1293,6 +1294,10 @@ body {
   }
 
   .price-table td:first-child {
+    padding-left: 1rem;
+  }
+
+  .price-table td:last-child {
     padding-left: 1rem;
   }
 }
