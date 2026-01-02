@@ -420,16 +420,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
- 
-  z-index: 1;
-}
-
-.about__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   z-index: 1;
  /* background-color: rgba(0, 0, 0, 0.5); */ /* jednolita przyciemniona nakładka */
 
@@ -540,28 +530,28 @@ body {
 /* ---------------------------
    TOOLTIPY - CHMURKI
 --------------------------- */
-.service {
+/*.service {
   position: relative; /* potrzebne do pozycjonowania chmurki */
-}
+/*} */
 
 /* Chmurka (dymek) */
-.service::after {
+/*.service::after {
   content: attr(data-tooltip);
   position: absolute;
   bottom: 120%; /* nad elementem */
-  left: 50%;
+ /* left: 50%;
   transform: translateX(-50%) translateY(10px);
   background: var(--color-plum);
   color: var(--color-white);
   padding: 0.8rem 1.2rem;
   border-radius: 20px; /* zaokrąglone krawędzie – efekt chmurki */
-  font-size: 0.9rem;
+  /*font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.5px;
   white-space: normal; /* pozwala na zawijanie tekstu */
-  word-wrap: break-word; /* łamanie długich słów */
-  max-width: 240px; /* maksymalna szerokość chmurki */
-  opacity: 0;
+  /*word-wrap: break-word; /* łamanie długich słów */
+  /*max-width: 240px; /* maksymalna szerokość chmurki */
+ /* opacity: 0;
   pointer-events: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: all 0.35s ease;
@@ -569,7 +559,7 @@ body {
 }
 
 /* Ogonek chmurki */
-.service::before {
+/*.service::before {
   content: '';
   position: absolute;
   bottom: 112%;
@@ -584,20 +574,20 @@ body {
 }
 
 /* Pokazanie chmurki po najechaniu */
-.service:hover::after,
+/*.service:hover::after,
 .service:hover::before {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
 
 /* Responsywność — dopasowanie tooltipa do małych ekranów */
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   .service::after {
     max-width: 90vw; /* nigdy nie wyjdzie poza ekran */
-    font-size: 0.85rem;
+    /*font-size: 0.85rem;
     padding: 0.7rem 1rem;
   }
-}
+} */
 
 
 /* ---------------------------
