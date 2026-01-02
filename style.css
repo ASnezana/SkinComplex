@@ -645,13 +645,16 @@ body {
    PRICE SECTION - ACCORDION
 --------------------------- */
 
-/* Ukrycie zawartości accordionu */
+/* Ukrycie zawartości accordionu (animation-friendly) */
 .accordion-content {
-  display: none;
+  display: block; /* block so we can animate max-height */
   width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-height: 0; /* domyślnie schowane */
+  overflow: hidden; /* ukrywa zawartość przy max-height:0 */
+  transition: max-height 0.35s ease; /* płynne rozwijanie */
 }
 
 /* Sekcje accordionu */
@@ -702,7 +705,9 @@ body {
 
 /* Aktywny stan (po rozwinięciu) */
 .accordion-toggle.active + .accordion-content {
-  display: block;
+  /* zamiast display:block używamy max-height, aby animacja działała */
+  max-height: 80vh;
+  overflow: auto;
 }
 
 .accordion-toggle.active .accordion-arrow {
@@ -746,6 +751,36 @@ body {
   border-bottom: 1px solid #ccc;
 }
 
+/* ---------------------------
+   Allow opening accordion via :target (CSS-only)
+   When a user clicks a link to #section-id, the section becomes :target
+   and we display and expand its accordion content. Note: for very
+   long content we allow scrolling inside the panel (max-height: 80vh).
+--------------------------- */
+
+/* Ensure max-height can transition when shown */
+.accordion-content {
+  transition: max-height 0.35s ease;
+  overflow: hidden; /* default to hidden to animate smoothly */
+}
+
+/* When section is targeted by hash, show and expand the content */
+.accordion-section:target .accordion-content {
+  display: block; /* override default hidden */
+  max-height: 80vh; /* enough to show most content; will scroll if larger */
+  overflow: auto; /* allow internal scrolling for very long content */
+}
+
+/* Visual state for the toggle when its section is targeted */
+.accordion-section:target .accordion-toggle {
+  background-color: var(--color-10);
+  color: var(--color-gray);
+}
+
+/* Make sure when navigated to the section it is not hidden under the sticky header */
+.accordion-section {
+  scroll-margin-top: calc(var(--header-height, 80px) + 10px);
+}
 
 /* ---------------------------
    INFO BOXES

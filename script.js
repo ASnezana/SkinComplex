@@ -76,7 +76,6 @@ document.querySelectorAll('.accordion-toggle').forEach(button => {
 
   // ustaw aria
   button.setAttribute("aria-expanded", "false");
-  content.style.maxHeight = "0px";
 
   button.addEventListener('click', () => {
     const isOpen = button.classList.toggle('active');
@@ -86,19 +85,78 @@ document.querySelectorAll('.accordion-toggle').forEach(button => {
       if (other !== button) {
         other.classList.remove('active');
         other.setAttribute("aria-expanded", "false");
+        // ustaw inline maxHeight na 0 aby zamknąć panel nawet gdy :target jest aktywne
         other.nextElementSibling.style.maxHeight = "0px";
       }
     });
 
-    button.setAttribute("aria-expanded", isOpen);
+    button.setAttribute("aria-expanded", String(isOpen));
 
     if (isOpen) {
-      content.style.maxHeight = content.scrollHeight + "px";
+      // Krótkie opóźnienie, aby układ miał czas się przeliczyć przed zmierzeniem wysokości
+      setTimeout(() => {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }, 30);
     } else {
+      // ustaw maxHeight 0 aby zwinąć panel nawet gdy :target trzyma go otwartym
       content.style.maxHeight = "0px";
     }
   });
 });
+
+  // Auto-otwieranie akordeonu na podstawie fragmentu URL (np. #oprawa-oczu)
+  function openAccordionForHash(hash) {
+    if (!hash || hash === '#') return;
+    const section = document.querySelector(hash);
+    if (!section) return;
+    const button = section.querySelector('.accordion-toggle');
+    if (!button) return;
+
+    // Zamknij inne sekcje i wymuś zamknięcie ich paneli
+    document.querySelectorAll('.accordion-toggle').forEach(other => {
+      if (other !== button) {
+        other.classList.remove('active');
+        other.setAttribute('aria-expanded', 'false');
+        // ustaw na 0px, aby panel na pewno się zwinął, nawet jeśli :target jest aktywny
+        other.nextElementSibling.style.maxHeight = "0px";
+      }
+    });
+
+    const content = button.nextElementSibling;
+    button.classList.add('active');
+    button.setAttribute('aria-expanded', 'true');
+
+    // Wymuś rozwinięcie ustawiając zmierzoną wysokość (unikanie pozostawionego inline 0px)
+    content.style.maxHeight = content.scrollHeight + "px";
+
+    // Przewiń do widoku z uwzględnieniem offsetu nagłówka
+    setTimeout(() => {
+      const header = document.querySelector('.header');
+      const headerHeight = header ? header.offsetHeight : 0;
+      const top = section.getBoundingClientRect().top + window.scrollY - headerHeight - 10;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }, 60);
+  }
+
+  // Otwórz przy ładowaniu, jeśli istnieje hash
+  if (location.hash) {
+    openAccordionForHash(location.hash);
+  }
+
+  // Otwórz przy zmianie hash
+  window.addEventListener('hashchange', () => {
+    openAccordionForHash(location.hash);
+  });
+
+  // Upewnij się, że kliknięcie dowolnego linku z hashem otworzy odpowiedni akordeon (jeśli istnieje)
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const hash = link.getAttribute('href');
+      if (!hash || hash === '#') return;
+      // Krótkie opóźnienie, aby przeglądarka ustawiła hash i układ się ustabilizował
+      setTimeout(() => openAccordionForHash(hash), 120);
+    });
+  });
 
 });
 
