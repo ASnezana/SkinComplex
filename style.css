@@ -252,14 +252,7 @@ body {
   cursor: pointer;
 }
 
-/*---------------------------
-  COLOR BAR
----------------------------*/
 
-.color-bar{
-  background: var(--color-7);
-  padding: 1.2rem 0; /*szerokość paska*/
-}
 
 /* ---------------------------
    PHONE BAR
