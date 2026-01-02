@@ -36,8 +36,8 @@ a:active {
  --color-4:#00A896;
  --color-5:#01C3A3;
  --color-6:#02DEAF;
- --color-7:#68DE7E; /*light green -TAK*/
- --color-8:#9DDC57;
+ --color-7:/* #68DE7E; light green -TAK*/#fdfdf0;
+ --color-8 :#9DDC57; 
  --color-9:#D1D930; /*pear -TAK*/
  --color-10:#FBFFB1; /*mindaro -TAK*/
  
@@ -373,7 +373,7 @@ body {
 
 /* 1 box – fioletowy */
 .info__box:nth-child(1) {
-  background-color: var(--color-7); /* fiolet */
+  background-color: var(--color-4); /* fiolet */
   color:var(--color-white);
   padding: 1rem;
 }
@@ -581,7 +581,7 @@ body {
 
 /* Kafelek */
 .service {
-  background: var(--color-10);
+  background: var(--color-1); 
   padding: 2rem 1rem;
   box-shadow:
     0 6px 15px rgba(0, 0, 0, 0.25),
@@ -595,11 +595,13 @@ body {
   margin-top: 0.5rem;
   font-size: 1rem;
   font-weight: 500;
+  color: var(--color-7)
 }
 
 .service img {
   height: 60px;
   margin-bottom: 0.5rem;
+  color: var(--color-7)
 }
 
 .service:hover {
