@@ -222,20 +222,21 @@ body {
 
 
 .nav__list a:hover {
-  color: var(--color-accent);
+  color: var(--color-4); /* zielony przy hover */
 }
 
 
+/* zakomentowany kod dla ostatniego linku „Kontakt” w menu nawigacyjnym */
 
+/*.nav__list li:last-child a {
+ /* background-color: var(--color-10); /* mindaro tło dla „Kontakt” */
+/*  color: var(--color-1);           /* kontrastowy tekst */
+/*}
 
-.nav__list li:last-child a {
-  background-color: var(--color-9); /* mindaro tło dla „Kontakt” */
-  color: var(--color-1);           /* kontrastowy tekst */
-}
-
-.nav__list li:last-child a:hover {
-  background-color: var(--color-10); /* zmiana tła przy hover */
-}
+/*.nav__list li:last-child a:hover {
+ /* background-color: var(--color-4); /* zmiana tła przy hover */
+ /* color: var(--color-10);
+/*} */
 
 .nav__list.active {
   background-color: var(--color-1); 
