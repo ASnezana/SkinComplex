@@ -714,7 +714,7 @@ body {
 .lb-image {
   border-radius: 0 !important;
   background: none !important;
-  /*border: none !important; */ /* odkomentuj, jeśli chcesz usunąć biały border */
+  border: none !important; /*  usuwa obramowanie białe */
 }
 
 
