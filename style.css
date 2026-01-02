@@ -248,7 +248,7 @@ body {
   display: none;
   background: none;
   border: none;
-  color: var(--color-9);
+  color: var(--color-10);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -1164,7 +1164,7 @@ body {
   position: fixed;       /* przyklejone do ekranu */
   top: 0;
   right: -100%;          /* startuje poza ekranem */
-  height: 50vh;         /* pełna wysokość */
+  height: 60vh;         /* pełna wysokość */
   width: 80%;            /* zajmuje max 80% szerokości */
   max-width: 300px;      /* ograniczenie na większych ekranach */
   flex-direction: column;
@@ -1185,6 +1185,11 @@ body {
     text-align: center;
     font-size: 1.2rem;
   }
+/* Styl dla ostatniego linku „Kontakt” w menu nawigacyjnym na mobilkach */
+  .nav__list li:last-child a {
+ background-color: var(--color-10); /* mindaro tło dla „Kontakt” */
+ color: var(--color-1);           /* kontrastowy tekst */
+}
 
    /* Animacja X */
  /* Hamburger – płynna animacja obrotu */
