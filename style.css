@@ -92,7 +92,7 @@ html {
   visibility: hidden;
   z-index: 999;
   transition: all 0.35s ease;
-  backdrop-filter: blur(4px); /*  lekki blur tła */
+ /* backdrop-filter: blur(4px); /*  lekki blur tła */
   box-shadow: 0 6px 18px #61437959; /* 🌫️ delikatny fioletowy cień */
 }
 
@@ -110,7 +110,7 @@ html {
 /* Hover (ładny zoom) */
 #backToTop:hover {
   transform: scale(1.15) translateY(-2px);
-  background-color: var(--color-accent);
+  background-color: var(--color-4);
   box-shadow: 0 8px 25px rgba(255, 138, 139, 0.45); /* jaśniejszy cień na hover */
 }
 
