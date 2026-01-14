@@ -186,6 +186,33 @@ rejectBtn.addEventListener("click", () => {
   cookieBanner.style.display = "none";
 }); 
 
+// =========================
+// MAPA – POKAZYWANIE PO COOKIE
+// =========================
+const mapConsentBtn = document.getElementById("map-consent");
+const mapContainer = document.getElementById("map-container");
+const mapPlaceholder = document.getElementById("map-placeholder");
+
+// URL Twojej mapy
+const mapSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2442.71780435146!2d16.574649315801307!3d52.609823179815066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4704a2d597e81651%3A0x2d1265cb217a7a8e!2sJastrowska%2027C%2C%2064-500%20Szamotu%C5%82y!5e0!3m2!1spl!2spl!4v1730745032000!5m2!1spl!2spl";
+
+// Funkcja do wstawienia iframe
+function loadMap() {
+  mapContainer.innerHTML = `<iframe src="${mapSrc}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%; height:100%; border:0;"></iframe>`;
+  mapPlaceholder.style.display = "none";
+}
+
+// Jeśli cookies już zaakceptowane, wczytaj mapę automatycznie
+if (localStorage.getItem("cookieConsent") === "accepted") {
+  loadMap();
+}
+
+// Obsługa przycisku
+mapConsentBtn.addEventListener("click", () => {
+  localStorage.setItem("cookieConsent", "accepted");
+  loadMap();
+});
+
 });
 
 
