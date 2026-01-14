@@ -158,6 +158,10 @@ document.querySelectorAll('.accordion-toggle').forEach(button => {
     });
   });
 
+ // Aktualizacja roku w stopce
+    const currentYear = document.getElementById('current-year');
+    currentYear.textContent = new Date().getFullYear();
+
 });
 
 
