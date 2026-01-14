@@ -1,0 +1,88 @@
+POLITYKA PRYWATNOŚCI
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polityka Prywatności - Skin Complex</title>
+  <!-- Podłączenie głównego CSS strony -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER ( wspólny header na wszystkich stronach) -->
+  <header class="header">
+    <div class="header__content container">
+      <div class="header__logo-content">
+        <a href="index.html" class="header__logo">
+          <img src="images/logo.png" alt="Skin Complex">
+          <span class="logo-text">Skin Complex</span>
+        </a>
+        </div>
+  </header>
+
+  <!-- GŁÓWNA TREŚĆ POLITYKI -->
+  <main class="container" style="padding:4rem 0;">
+    <h1 class="section-title">Polityka Prywatności</h1>
+
+    <section class="privacy-content">
+      <p>
+        Niniejsza Polityka Prywatności opisuje zasady przetwarzania danych osobowych użytkowników
+        strony Skin Complex. Dbamy o bezpieczeństwo Twoich danych i transparentność naszych działań.
+      </p>
+
+      <h2>1. Administrator danych</h2>
+      <p>
+        Administratorem Twoich danych osobowych jest Skin Complex, ul. Jastrowska 27C, 64-500 Szamotuły.
+      </p>
+
+      <h2>2. Jakie dane zbieramy</h2>
+      <p>
+        Zbieramy jedynie niezbędne dane kontaktowe podawane dobrowolnie, np. imię, adres e-mail, numer telefonu.
+        Nie udostępniamy danych osobom trzecim bez Twojej zgody.
+      </p>
+
+      <h2>3. Pliki cookies</h2>
+      <p>
+        Strona korzysta z plików cookies w celu prawidłowego działania serwisu oraz analizy ruchu.
+        Korzystając ze strony, wyrażasz zgodę na użycie cookies zgodnie z ustawieniami przeglądarki.
+      </p>
+
+      <h2>4. Cele przetwarzania danych</h2>
+      <ul>
+        <li>Kontakt z klientem i obsługa zapytań.</li>
+        <li>Realizacja zamówień i usług.</li>
+        <li>Poprawa jakości strony i doświadczenia użytkownika.</li>
+      </ul>
+
+      <h2>5. Twoje prawa</h2>
+      <p>
+        Masz prawo do żądania dostępu do swoich danych, ich sprostowania, usunięcia lub ograniczenia przetwarzania,
+        a także prawo do wniesienia sprzeciwu wobec przetwarzania oraz przenoszenia danych.
+      </p>
+
+      <h2>6. Kontakt</h2>
+      <p>
+        W sprawach związanych z danymi osobowymi prosimy o kontakt pod adresem e-mail: <a href="mailto:kontakt@skincomplex.pl">kontakt@skincomplex.pl</a>.
+      </p>
+
+      <p style="margin-top:2rem;">
+        Data ostatniej aktualizacji: 14 stycznia 2026
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; <span id="current-year"></span> Skin Complex. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+
+  <!-- Skrypt do aktualizacji roku w stopce -->
+  <script>
+    const currentYear = document.getElementById('current-year');
+    currentYear.textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
