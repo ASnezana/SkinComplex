@@ -992,6 +992,101 @@ body {
 }
 
 
+/* =========================
+   COOKIE BANNER – SKIN COMPLEX
+========================= */
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 900px;
+
+  background: var(--color-1); /* ciemny lazurowy */
+  color: var(--color-10);     /* mindaro */
+  padding: 1.2rem 1.5rem;
+
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  z-index: 9999;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Wewnętrzny kontener */
+.cookie-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Tekst */
+.cookie-container p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0;
+  max-width: 65%;
+}
+
+/* Link */
+.cookie-container a {
+  color: var(--color-10);
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.25s ease;
+}
+
+.cookie-container a:hover {
+  color: var(--color-4);
+}
+
+/* Przyciski */
+.cookie-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
+/* Wspólne */
+.cookie-buttons button {
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Akceptuj */
+#cookie-accept {
+  background: var(--color-4);
+  color: var(--color-white);
+}
+
+#cookie-accept:hover {
+  background: var(--color-5);
+  transform: translateY(-2px);
+}
+
+/* Odrzuć */
+#cookie-reject {
+  background: transparent;
+  color: var(--color-10);
+  border: 1px solid var(--color-10);
+}
+
+#cookie-reject:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+
+
 
 /* ---------------------------
    ANIMACJE
@@ -1100,6 +1195,20 @@ body {
     text-align: center;
     gap: 8px;               /* odstęp między ikoną a tekstem */
     margin: 1em auto;       /* odstęp między liniami kontaktu */
+  }
+
+   .cookie-banner {
+    padding: 1rem 1.2rem;
+  }
+
+  .cookie-container p {
+    font-size: 0.9rem;
+    max-width: 60%;
+  }
+
+  .cookie-buttons button {
+    padding: 0.55rem 1.2rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -1305,7 +1414,7 @@ body {
   .price-table td:last-child {
     padding-left: 1rem;
   }
-}
+
 
 
 
@@ -1367,6 +1476,35 @@ body {
     padding: 1.2rem 0;
   }
 
+   .cookie-banner {
+    width: calc(100% - 20px);
+    padding: 0.8rem 1rem;
+    bottom: 10px;
+  }
+
+  .cookie-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .cookie-container p {
+    text-align: center;
+    max-width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .cookie-buttons {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .cookie-buttons button {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+}
 
 /* =========================
    DUŻE DESKTOPOWE EKRANY (≥1440px)
@@ -1382,6 +1520,20 @@ body {
 
   .hero__subtitle {
     font-size: 2.5rem;
+  }
+
+  .cookie-banner {
+    max-width: 1000px;
+    padding: 1.5rem 2rem;
+  }
+
+  .cookie-container p {
+    font-size: 1rem;
+  }
+
+  .cookie-buttons button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
   }
 }
 

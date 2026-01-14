@@ -162,6 +162,30 @@ document.querySelectorAll('.accordion-toggle').forEach(button => {
     const currentYear = document.getElementById('current-year');
     currentYear.textContent = new Date().getFullYear();
 
+/* ==========================
+    COOKIE BANNER
+========================== */
+const cookieBanner = document.getElementById("cookie-banner");
+const acceptBtn = document.getElementById("cookie-accept");
+const rejectBtn = document.getElementById("cookie-reject");
+
+// Sprawdź, czy użytkownik już zaakceptował/rejected cookies
+if (!localStorage.getItem("cookieConsent")) {
+  cookieBanner.style.display = "block";
+}
+
+// Akceptuj
+acceptBtn.addEventListener("click", () => {
+  localStorage.setItem("cookieConsent", "accepted");
+  cookieBanner.style.display = "none";
+});
+
+// Odrzuć
+rejectBtn.addEventListener("click", () => {
+  localStorage.setItem("cookieConsent", "rejected");
+  cookieBanner.style.display = "none";
+}); 
+
 });
 
 
