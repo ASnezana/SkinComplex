@@ -100,12 +100,12 @@ self.addEventListener('message', event => {
 
 
 
-/*  Funkcje:
+/*
+Funkcje:
 
-Priorytetowe cache: HTML, CSS, JS, manifest, ikony.
-
-Dynamiczne cache’owanie obrazów galerii z limitem, aby nie zajmować zbyt dużo miejsca.
-
-Fallback offline dla strony (index.html).
-
-Automatyczne czyszczenie starych wersji cache.  */
+- Priorytetowe cache: HTML, CSS, JS, manifest oraz ikony (STATIC_ASSETS).
+- Dynamiczne cache’owanie obrazów galerii z limitem, aby nie zajmować zbyt dużo miejsca.
+- Fallback offline dla dokumentów (index.html).
+- Automatyczne czyszczenie starych wersji cache przy aktualizacji.
+- Natychmiastowa aktywacja nowej wersji service workera (skipWaiting + clients.claim).
+*/
