@@ -510,6 +510,15 @@ body {
   color: var(--color-7)
 }
 
+.services__grid .service:nth-child(3) p {  /* trzeci kafelek  - stppy- napis w kolorze mindaro */
+  color: var(--color-10);
+}
+
+
+.services__grid .service:nth-child(4) p {  /* czwarty kafelek  - pielęgnacja- napis w kolorze mindaro */
+  color: var(--color-10);
+}
+
 .service img {
   height: 60px;
   margin-bottom: 0.5rem;
@@ -1434,12 +1443,13 @@ body {
   }
 
   /* GALLERY */
-  .gallery__grid {
-   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    .gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px; /* opcjonalnie */
   }
 
-  
-
+ 
   /* CENNIK */
    .accordion-toggle {
     padding: 0.8rem 1rem; /* mniejsze paddingi na mobile */
