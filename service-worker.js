@@ -19,6 +19,7 @@ const MAX_IMAGE_CACHE = 30;
 
 // Instalacja SW – cache plików statycznych
 self.addEventListener('install', event => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(STATIC_ASSETS))
   );
@@ -27,11 +28,14 @@ self.addEventListener('install', event => {
 // Aktywacja – usuwa stare cache
 self.addEventListener('activate', event => {
   event.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(
-        keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
-      )
-    )
+    Promise.all([
+      caches.keys().then(keys =>
+        Promise.all(
+          keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
+        )
+      ),
+      self.clients.claim()
+    ])
   );
 });
 
@@ -63,7 +67,6 @@ self.addEventListener('fetch', event => {
           ) {
             const responseClone = networkResponse.clone();
             caches.open(CACHE_NAME).then(cache => {
-              // Cache tylko obrazków galerii
               if (event.request.url.match(/\.(jpg|jpeg|png|webp)$/i)) {
                 cache.put(event.request, responseClone).then(() => {
                   limitImageCache(CACHE_NAME, MAX_IMAGE_CACHE);
@@ -74,7 +77,6 @@ self.addEventListener('fetch', event => {
           return networkResponse;
         })
         .catch(() => {
-          // Fallback offline dla dokumentów
           if (event.request.destination === 'document') {
             return caches.match('/index.html');
           }
@@ -83,18 +85,19 @@ self.addEventListener('fetch', event => {
   );
 });
 
-// Opcjonalnie: cache miniatur galerii wysyłanych przez stronę
+// Opcjonalnie: cache miniatur galerii
 self.addEventListener('message', event => {
   if (event.data && event.data.type === 'CACHE_THUMBNAILS') {
     caches.open(CACHE_NAME).then(cache => {
       event.data.urls.forEach(url => {
         if (url.match(/\.(jpg|jpeg|png|webp)$/i)) {
-          cache.add(url).catch(err => console.warn('Nie udało się dodać miniatury do cache:', url, err));
+          cache.add(url).catch(() => {});
         }
       });
     });
   }
 });
+
 
 
 /*  Funkcje:
