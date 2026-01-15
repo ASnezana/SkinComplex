@@ -975,7 +975,7 @@ body {
   height: 40px;
   border-radius: 50%;
   background: var(--color-plum);
-  color: var(--color-10);
+  color: var(--color-7);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -990,7 +990,7 @@ body {
 
 .icon-badge:hover {
   background: var(--color-4);
-  color: var(--color-plum);
+  color: var(--color-7);
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(97, 67, 121, 0.5);
 }
