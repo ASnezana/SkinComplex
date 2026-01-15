@@ -344,7 +344,7 @@ body {
   opacity: 1;
 }
 
-.visualy-hidden {
+.visually-hidden {
   color: var(--color-7);
   opacity: 0;
   }
