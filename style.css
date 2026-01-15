@@ -344,7 +344,10 @@ body {
   opacity: 1;
 }
 
-
+.visualy-hidden {
+  color: var(--color-7);
+  opacity: 0;
+  }
 
 
 /* ---------------------------
