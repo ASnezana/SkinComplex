@@ -190,17 +190,22 @@ Responsywna, nowoczesna i przyjazna dla użytkownika, z wieloma interaktywnymi s
 ---
 
 ## 📂 Struktura Plików
-/index.html  
-/css/style.css  
-/js/script.js  
-/images/  
-/README.md  
+├─ index.html
+├─ polityka-prywatnosci.html
+├─ style.css
+├─ script.js
+├─ service-worker.js
+├─ site.webmanifest
+├─ images/
+├─ sitemap.xml
+├─ robots.txt
+└─ .htaccess  
 
 
 ---
 
 ## 📌 Autor
-Skin Complex 💆‍♀️ – projekt i kodowanie przez Snow WhITe, 2025
+Skin Complex 💆‍♀️ – projekt i kodowanie przez Snow WhITe, 2026
 
 ---
 
