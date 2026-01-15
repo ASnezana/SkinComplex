@@ -1525,6 +1525,7 @@ body {
 
   /* KONTAKT - IKONY NAD TEKSTEM */
   .contact__details p {
+    display: flex;  
     flex-direction: column;  /* ikona nad tekstem */
     text-align: center;
     gap: 8px;                /* odstęp między ikoną a tekstem */
