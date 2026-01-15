@@ -543,12 +543,19 @@
 
   <script src="script.js"></script>
 
-<script type="application/ld+json">
+
+
+  <!-- Dane strukturalne (Schema.org / JSON-LD)
+  Opis firmy typu BeautySalon dla wyszukiwarek (Google, Bing).
+  Pomaga w SEO lokalnym: wizytówka firmy, adres, godziny otwarcia,
+  telefon oraz profile społecznościowe.-->
+
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BeautySalon",
-  "name": "Skin Complex",
-  "image": "https://twojastrona.pl/images/logo.png",
+  "@type": ["BeautySalon", "salon kosmetyczny", "salon urody"],
+    "name": "Skin Complex",
+  "image": "https://skincomplex.pl/images/logo-bez-tła.png",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "ul. Jastrowska 27c",
@@ -556,28 +563,23 @@
     "postalCode": "64-500",
     "addressCountry": "PL"
   },
-  "telephone": "+48 123 456 789",
+  "telephone": "+48 602 482 788",
   "email": "kontakt@skincomplex.pl",
   "url": "https://skincomplex.pl",
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
-        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
       ],
       "opens": "09:00",
-      "closes": "18:00"
+      "closes": "20:00"
     },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Saturday"],
-      "opens": "10:00",
-      "closes": "14:00"
-    }
+    
   ],
   "sameAs": [
     "https://www.instagram.com/skincomplex",
-    "https://www.facebook.com/skincomplex",
+    "https://www.facebook.com/share/1GGTj89BSa/",
     "https://mojblog.blogspot.com"
   ]
 }
@@ -585,6 +587,6 @@
 
 
 
-  <!-- Made by Snow WhITe 2025 -->
+  <!-- Made by Snow WhITe 2026 -->
 </body>
 </html>
