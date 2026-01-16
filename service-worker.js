@@ -1,4 +1,4 @@
-const CACHE_NAME = 'skincomplex-cache-v1';
+const CACHE_NAME = 'skincomplex-cache-v2';
 
 // Pliki statyczne / priorytetowe
 const STATIC_ASSETS = [
