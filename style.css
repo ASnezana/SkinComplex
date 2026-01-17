@@ -708,7 +708,7 @@ body {
 }
 
 /* ---------------------------
-   INFO BOXES
+   INFO BOX
 --------------------------- */
 .info {
   background: var(--color-7); 
@@ -729,9 +729,10 @@ body {
 }
 
 /* 1 box – green */
-.info__box :nth-child(1) {
+.info__box:nth-child(1) {
   background-color: var(--color-4); 
   color:var(--color-white);
+  width: 80%;
   padding: 1rem;
 }
 
@@ -1088,10 +1089,16 @@ body {
     flex: 1 1 100%;           /* zajmują całą szerokość */
   }
 
-  /* INFO BOXY */
+  /* INFO BOX */
   .info__container {
     flex-direction: column;
     align-items: center;      /* wyśrodkowanie boxów */
+  }
+   .info__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   /* CENNIK */
