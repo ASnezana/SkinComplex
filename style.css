@@ -82,51 +82,48 @@ a {
    - Set base typography
    - Style common components (header, footer, buttons, etc.)
    ===================================================== */
+
+
+
 :root {
+  /* ---------------------------
+     COLORS IN USE
+  --------------------------- */
+  --color-1: #05668D;      /* dark azure */
+  --color-4: #00A896;      /* green – hover / info box 1 */
+  --color-7: #fdfdf0;      /* page background */
+  --color-10: #FBFFB1;     /* mindaro – logo, buttons, text */
+  --color-plum: #05668D;   /* plum – footer, back to top, info box 3 */
+  --color-white: #ffffff;   /* hero text, info boxes, map icons */
+  --color-accent: #9DDC57; /* pink / info box 2 / button hover */
+  --color-light-brown:#CABFB2; /* light brown - cennik */
+  --color-light-gray:#cccccc; /* light gray - cennik */
+  --color-light-yellow:#fafcd6; /* light yellow - cennik hover */
+  --color-violet:#61437980;    /* violet - shadow */ 
+  --color-black: #000;      /* optional, e.g., body or fallback */
 
-/*kolory Ania*/
- --color-1:#05668D; /*ciemny lazurowy -TAK*/
- --color-2:#028090;
- --color-3:#019493;
- --color-4:#00A896;
- --color-5:#01C3A3;
- --color-6:#02DEAF;
- --color-7:/*  -TAK*/#fdfdf0;
- --color-8 :#9DDC57; 
- --color-9:#D1D930; /*pear -TAK*/
- --color-10:#FBFFB1; /*mindaro -TAK*/
- 
- --color-1-bright:#E6F4FB; /*jasny błękitny do tabelki cennika na zmiane z błekitnym*/
- --color-1-more-bright:#D4EDF9; /*jeszcze jaśniejszy błękitny do tabelki cennika*/
- 
-
-
-
-
-  --color-plum:/* #325094; */#05668D;
-  --color-blue: #c2e9ff;
-  --color-light-blue: /*#fdf8f3;  #f7f2ed; */ #c1e4f5;  /*  błekitny */
-  --color-accent: /*#FF8A8B; */#9DDC57;
-  --color-white: #ffffff; /* biały -TAK*/
-  --color-black: #000; /* czarny -TAK*/
-  --color-gray: #666;
+  /* ---------------------------
+     OTHER GLOBAL VARIABLES
+  --------------------------- */
   --max-width: 1200px;
   --transition: all 0.3s ease;
   --shadow: 0 2px 8px rgba(0,0,0,0.1);
+
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
 }
 
 
+
 html {
-  scroll-padding-top: 120px; /* dostosuj do wysokości headera */
-  scroll-behavior: smooth;
+  scroll-padding-top: 120px; /* adjust to the height of the header */
+  scroll-behavior: smooth; /* smooth scrolling for anchor links */
 }
 
 
 
 /* ---------------------------
-  PRZYCISK "BACK TO TOP"
+  BUTTON "BACK TO TOP"
 --------------------------- */
 #backToTop {
   position: fixed;
@@ -147,8 +144,7 @@ html {
   visibility: hidden;
   z-index: 999;
   transition: all 0.35s ease;
- /* backdrop-filter: blur(4px); /*  lekki blur tła */
-  box-shadow: 0 6px 18px #61437959; /* 🌫️ delikatny fioletowy cień */
+  box-shadow: 0 6px 18px #61437959; /*  subtle purple shadow  */
 }
 
 #backToTop i {
@@ -156,13 +152,13 @@ html {
 }
 
 
-/* Pokazuj dopiero po scrollu */
+/* Show only after scrolling */
 #backToTop.show {
   opacity: 1;
   visibility: visible;
 }
 
-/* Hover (ładny zoom) */
+/* Hover effect (smooth zoom) */
 #backToTop:hover {
   transform: scale(1.15) translateY(-2px);
   background-color: var(--color-4);
@@ -178,11 +174,11 @@ body {
   background-color: var(--color-7); 
   color: var(--color-plum);
   line-height: 1.6;
-  overflow-x: hidden; /* zapobiega poziomemu przewijaniu */
+  overflow-x: hidden; /*prevent horizontal scroll*/
 }
 
 /* ---------------------------
-   CONTAINER + SEKCJE
+   CONTAINER + SECTION TITLES
 --------------------------- */
 .container {
   width: 90%;
@@ -209,7 +205,7 @@ body {
    HEADER + NAV
 --------------------------- */
 .header {
-  background: var(--color-1); /*ciemny lazurowy*/
+  background: var(--color-1); 
   box-shadow: var(--shadow);
   position: sticky;
   top: 0;
@@ -244,7 +240,7 @@ body {
 
 .logo-text {
     font-family: 'Montserrat', sans-serif;
-    color: var(--color-10); /* FBFFB1 */
+    color: var(--color-10); 
     font-size: 2rem;        /* 32px */
     font-weight: 650;
     height: 3.2rem;         /* 51.2px */
@@ -261,37 +257,24 @@ body {
 }
 
 .nav__list li a {
-  display: flex;               /* sprawia, że link jest elastyczny */
-  align-items: center;         /* centrowanie pionowe tekstu */
-  justify-content: center;     /* centrowanie poziome */
-  height: 40px;                /* stała wysokość wszystkich linków */
-  padding: 0 0.25rem;             /* poziome odstępy wewnątrz linku */
-  text-decoration: none;
-  line-height: 1.2; 
-  color: var(--color-10); /*FBFFB1*/
-  font-weight: 400;
-  transition: var(--transition);
-  font-family: 'Montserrat', sans-serif;
-
+  display: flex;               /* makes the link a flexible box */
+  align-items: center;         /* vertically centers the text */
+  justify-content: center;     /* horizontally centers the text */
+  height: 40px;                /* sets a fixed height for all links */
+  padding: 0 0.25rem;          /* horizontal spacing inside the link */
+  text-decoration: none;       /* removes underline */
+  line-height: 1.2;            /* sets line height for text */
+  color: var(--color-10);      /* text color */
+  font-weight: 400;            /* normal font weight */
+  transition: var(--transition); /* smooth transition for hover effects */
+  font-family: 'Montserrat', sans-serif; /* sets font family */
 }
 
 
 .nav__list a:hover {
-  color: var(--color-4); /* zielony przy hover */
+  color: var(--color-4); /* green on hover  */
 }
 
-
-/* zakomentowany kod dla ostatniego linku „Kontakt” w menu nawigacyjnym */
-
-/*.nav__list li:last-child a {
- /* background-color: var(--color-10); /* mindaro tło dla „Kontakt” */
-/*  color: var(--color-1);           /* kontrastowy tekst */
-/*}
-
-/*.nav__list li:last-child a:hover {
- /* background-color: var(--color-4); /* zmiana tła przy hover */
- /* color: var(--color-10);
-/*} */
 
 .nav__list.active {
   background-color: var(--color-1); 
@@ -392,12 +375,12 @@ body {
 
 
 .about__text {
-  display: flex;            /* aktywuje Flexbox */
-  flex-direction: column;   /* układa elementy w kolumnie (w pionie) */
-  justify-content: flex-start; /* przykleja zawartość do góry kontenera */
-  text-align: center;      /* justowanie tekstu */
-  flex: 1 1 45%;   /* jeśli używasz flex w szerszym layoucie */
-  margin-bottom: 4rem;      /* odstęp na dole dla małych ekranów */   
+  display: flex;            
+  flex-direction: column;  
+  justify-content: flex-start; 
+  text-align: center;     
+  flex: 1 1 45%;   
+  margin-bottom: 4rem;     
 }
 
 .about__text p {
@@ -416,15 +399,15 @@ body {
   box-shadow: var(--shadow);
 }
 
-/* Kontener pełnej szerokości pod sekcją o mnie */
+/* Full-width container below the About section */
 .about__quote {
   position: relative;
-  width: 100vw; /* pełna szerokość okna */
-  min-height: 100vh; /* zajmuje co najmniej cały viewport */
-  margin-top: 3rem; /* odstęp od poprzedniej części    */
-  text-align: center;      /* wyśrodkowuje zarówno h3, jak i h2 */
-  background-image: url('images/tapeta.jpg'); /* tło cytatu */
-  background-size: cover;
+  width: 100vw;  /* full width of viewport */
+  min-height: 100vh; /* full height of viewport */
+  margin-top: 3rem; /* margin from the previous section  */
+  text-align: center;        /* centers both h3 and h2 */
+  background-image: url('images/tapeta.jpg'); /* background image */
+  background-size: cover;  /* make the background cover the entire container */
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -439,7 +422,7 @@ body {
   z-index: 2;
 }
 
-/* Przyciemniona nakładka */
+/* Dark overlay for the quote section */
 .about__overlay {
   position: absolute;
   top: 0;
@@ -447,20 +430,20 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1;
- /* background-color: rgba(0, 0, 0, 0.5); */ /* jednolita przyciemniona nakładka */
+ 
 
 
  background: linear-gradient(
-  rgba(0, 0, 0, 0.8) 0%, /* GÓRA — najciemniej */
+  rgba(0, 0, 0, 0.8) 0%, /* TOP — darkest part */
   rgba(0, 0, 0, 0.55) 50%,
   rgba(0, 0, 0, 0.25) 70%,
-  rgba(0, 0, 0, 0.1) 90% /* DÓŁ — prawie jasno */
+  rgba(0, 0, 0, 0.1) 90% /* BOTTOM — almost light */
 );
 
 }
 
 
-/* Tekst cytatu na środku */
+/* Text of the quote */
 .about__quote-text {
   position: relative;
   color:var(--color-white);
@@ -498,23 +481,23 @@ body {
 
 .services__grid {
   display: grid;
-  justify-content: center; /* wyśrodkowuje całą siatkę w poziomie */
+  justify-content: center; /* centers the entire grid horizontally */
   gap: 1.5rem;
   text-align: center;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  max-width: 1000px; /* żeby nie rozciągały się na cały ekran */
-  margin: 0 auto; /* centrowanie całej siatki w kontenerze */
+  max-width: 1000px;  /* prevents grid items from stretching across the full screen */
+  margin: 0 auto; /* centers the grid within the section */
 }
 
 
 .services__grid a.service {
   text-decoration: none;
-  color: inherit; /* zachowuje kolor tekstu */
-  display: block; /* pozwala zachować ten sam układ co div */
+  color: inherit; /* keeps the text color from the parent element */
+  display: block; /* ensures the element behaves like a block, similar to a div */
 }
 
 
-/* Kafelek */
+/* Tile / Service box */
 .service {
   background: var(--color-1); 
   padding: 2rem 1rem;
@@ -556,7 +539,7 @@ body {
 /* --- RWD --- */
 @media (max-width: 768px) {
   .services__grid {
-    grid-template-columns: 1fr; /* jeden kafelek w wierszu */
+    grid-template-columns: 1fr; /* one tile per row */
     max-width: 90%;
   }
 }
@@ -585,9 +568,9 @@ body {
   transform: scale(1.03);
 }
 
-/* Lightbox - minimalistyczny wygląd */
+/* Lightbox - minimalist appearance adjustments */
 
-/* Usuwa tło i padding kontenera */
+/* Removes container background and padding */
 .lightbox, 
 .lb-outerContainer, 
 .lb-container
@@ -598,16 +581,16 @@ body {
   box-shadow: none !important;
 }
 
-/* Usuwa border i zaokrąglenia obrazka */
+/* Removes border and rounding from the image */
 .lb-image {
   border-radius: 0 !important;
   background: none !important;
-  border: none !important; /*  usuwa obramowanie białe */
+  border: none !important; /*  removes white border */
 }
 
 
 
-/* Animacja */
+/* Animation */
 @keyframes zoomIn {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
@@ -617,32 +600,32 @@ body {
    PRICE SECTION - ACCORDION
 --------------------------- */
 
-/* Ukrycie zawartości accordionu (animation-friendly) */
+/*  Hides the accordion content (animation-friendly) */
 .accordion-content {
   display: block; /* block so we can animate max-height */
   width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-height: 0; /* domyślnie schowane */
-  overflow: hidden; /* ukrywa zawartość przy max-height:0 */
-  transition: max-height 0.35s ease; /* płynne rozwijanie */
+  max-height: 0; /* hidden by default */
+  overflow: hidden;  /* hides content when max-height is 0 */
+  transition: max-height 0.35s ease; /* smooth expansion */
 }
 
-/* Sekcje accordionu */
+/* accordion section */
 .accordion-section {
   margin: 0;
   padding: 0;
   border: none;
 }
 
-/* Padding wewnątrz container */
+/* Pricing container */
 .pricing .container,
 .accordion-section .container {
   padding: 0;
 }
 
-/* Nagłówki przycisków accordionu */
+/* Accordion button headers */
 .accordion-toggle {
   display: flex;
   justify-content: space-between;
@@ -653,14 +636,14 @@ body {
   cursor: pointer;
   margin: 0;
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--color-light-gray);
   text-align: left;
 }
 
 .accordion-toggle .price-title {
   color: var(--color-plum);
   font-weight: 500;
-  font-size: clamp(1rem, 2.2vw, 1.3rem); /* responsywne skalowanie */
+  font-size: clamp(1rem, 2.2vw, 1.3rem); /* responsive scaling */
   line-height: clamp(1.25rem, 2.6vw, 1.575rem);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -668,16 +651,16 @@ body {
   padding: 0;
 }
 
-/* Strzałka */
+/* Accordion arrow */
 .accordion-arrow {
   font-size: 1.2rem;
   color: var(--color-plum);
   transition: transform 0.3s ease;
 }
 
-/* Aktywny stan (po rozwinięciu) */
+/* Active state - expanded */
 .accordion-toggle.active + .accordion-content {
-  /* zamiast display:block używamy max-height, aby animacja działała */
+/* Instead of display: block, we use max-height so the animation works */
   max-height: 80vh;
   overflow: auto;
 }
@@ -687,10 +670,10 @@ body {
 }
 
 .accordion-toggle.active .price-title {
-  color: #CABFB2; 
+  color: var(--color-light-brown)
 }
 
-/* Tabela usług */
+/* Price table inside accordion - services */
 .price-table {
   width: 100%;
   border-collapse: collapse;
@@ -706,22 +689,22 @@ body {
 
 .price-table td:first-child {
   text-align: left;
-  padding-left: 3rem; /* nazwa usługi przesunięta bardziej w prawo */
+  padding-left: 3rem; /* service name indented further to the right */
 }
 
 .price-table td:last-child {
   text-align: right;
-  padding-left: 1rem; /* cena mniej przesunięta */
+  padding-left: 1rem; /* price less indented */
 } 
 
 /* Hover dla wierszy tabeli */
 .accordion-content .price-table tr:hover td {
-  background-color:#fafcd6;
+  background-color: var(--color-light-yellow);
 }
 
-/* Linie między wierszami tylko gdy accordion rozwinięty */
+/* Row borders shown only when the accordion is expanded */
 .accordion-toggle.active + .accordion-content .price-table td {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--color-light-gray);
 }
 
 /* ---------------------------
@@ -776,27 +759,12 @@ body {
   flex: 1 1 200px;
 }
 
-/* 1 box – zielony */
-.info__box:nth-child(1) {
-  background-color: var(--color-4); /* zielony */
+/* 1 box – green */
+.info__box :nth-child(1) {
+  background-color: var(--color-4); 
   color:var(--color-white);
   padding: 1rem;
 }
-
-/* 2 box – różowy */
-.info__box:nth-child(2) {
-  background-color: var(--color-accent); /* róż */
-  color: var(--color-white);
-  padding: 1rem;
-}
-
-/* 3 box – fioletowy */
-.info__box:nth-child(3) {
-  background-color: var(--color-plum); /* fiolet */
-  color: var(--color-white);
-  padding: 1rem;
-}
-
 
 .info__box i {
   display: block;
@@ -810,9 +778,7 @@ body {
 }
 
 
-
-
-/* obrót jak moneta (w osi Y) */
+/* 3D spin effect (like a coin rotation along the Y-axis) */
 @keyframes spin-3d {
   0%   { transform: rotateY(0deg); }
   100% { transform: rotateY(360deg); }
@@ -823,11 +789,10 @@ body {
   transform-style: preserve-3d;
 }
 
-
 .info__box:hover {
   transform: translateY(-4px);
- 
 }
+
 .info__box {
   perspective: 2000px;
 }
@@ -847,7 +812,7 @@ body {
   color: var(--color-plum);
 }
 
-/* placeholder + docelowa mapa */
+/* Map placeholder and actual map container */
 #map-placeholder,
 #map-container iframe {
   position: absolute;
@@ -862,11 +827,11 @@ body {
 
 .map-responsive {
   position: relative;
-  padding-bottom:56.25%; /* 16:9 proporcje */
+  padding-bottom:56.25%; /* 16:9 proportions */
   height: 0;
   overflow: hidden;
   max-width: 100%;
-  margin: 0 auto; /* wyśrodkowanie */
+  margin: 0 auto; /* centered */
 }
 
 .map-responsive iframe {
@@ -880,9 +845,9 @@ body {
 
 
 
-/* PRZYCISK MAPY  */
+/* MAP BUTTON */
 #map-consent {
-  background-color: var(--color-4);  /* zielony jak w innych przyciskach */
+  background-color: var(--color-4);  /* green like in other buttons */
   color: var(--color-white);
   border: none;
   padding: 0.6rem 1.4rem;
@@ -895,7 +860,7 @@ body {
   transition: all 0.25s ease;
   display: inline-block;
   text-align: center;
-  margin: 1rem 0; /* odstęp od mapy */
+  margin: 1rem 0; /* margin from map */
 }
 
 #map-consent:hover {
@@ -922,13 +887,13 @@ body {
 
 
 .contact__details {
-  text-align: center; /* centrowanie całego bloku */
+  text-align: center;/* center the entire block */
   margin-top: 2rem;
 }
 
-/* --- RESPONSYWNY UKŁAD IKON W SEKCJI KONTAKT --- */
+/* --- RESPONSIVE LAYOUT FOR ICONS IN THE CONTACT SECTION --- */
 
-/* DOMYŚLNIE: desktop — ikona i tekst w jednej linii */
+/* DEFAULT: desktop — icon and text displayed in a single line */
 .contact__details p {
   display: flex;
   align-items: center;
@@ -938,7 +903,8 @@ body {
   font-size: 1.1rem;
   color: var(--color-plum);
   text-align: center;
-  margin: 0.5em 0; /* drobny odstęp między wierszami */
+  margin: 0.5em 0; /* small spacing between lines */
+
 }
 
 .contact__details .icon-badge {
@@ -964,7 +930,7 @@ body {
   background: var(--color-4);
   color: var(--color-7);
   transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(97, 67, 121, 0.5);
+  box-shadow: 0 6px 14px #61437980;
 }
 
 
@@ -1019,8 +985,8 @@ body {
   width: calc(100% - 40px);
   max-width: 900px;
 
-  background: var(--color-1); /* ciemny lazurowy */
-  color: var(--color-10);     /* mindaro */
+  background: var(--color-1); 
+  color: var(--color-10);    
   padding: 1.2rem 1.5rem;
 
   border-radius: 16px;
@@ -1030,7 +996,8 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Wewnętrzny kontener */
+/* inner container */
+
 .cookie-container {
   display: flex;
   flex-direction: row;
@@ -1039,7 +1006,7 @@ body {
   gap: 1rem;
 }
 
-/* Tekst */
+/* Text */
 .cookie-container p {
   font-size: 0.95rem;
   line-height: 1.5;
@@ -1060,14 +1027,14 @@ body {
   color: var(--color-4);
 }
 
-/* Przyciski */
+/* Buttons */
 .cookie-buttons {
   display: flex;
   justify-content: flex-end;
   gap: 0.8rem;
 }
 
-/* Wspólne */
+/* shared styles / common styles */
 .cookie-buttons button {
   border: none;
   padding: 0.6rem 1.4rem;
@@ -1079,7 +1046,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Akceptuj */
+/* Accept */
 #cookie-accept {
   background: var(--color-4);
   color: var(--color-white);
@@ -1090,7 +1057,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Odrzuć */
+/* Reject */
 #cookie-reject {
   background: transparent;
   color: var(--color-10);
@@ -1106,28 +1073,28 @@ body {
 
 
 /* -------------------------------------------
-   RESPONSYWNOŚĆ CAŁEJ STRONY 
+   RESPONSIVENESS OF THE ENTIRE SITE 
    Desktop ≥1025px | Tablet 769–1024px | Mobile i small tablet ≤768px
 ------------------------------------------- */
 
 /* =========================
-   TABLETY (769–1024px)
+   TABLETS (769–1024px)
 ========================= */
 @media (min-width: 769px) and (max-width: 1024px){
 
-  /* OGÓLNE */
+  /* GENERAL STYLES */
   body {
-    font-size: 15px;         /* zmniejszamy tekst w tabletach */
+    font-size: 15px;     /* reduce text size on tablets */
     line-height: 1.6;
   }
 
   .container {
-    width: 92%;               /* lekko szerszy kontener */
+    width: 92%;              /* slightly wider container */
   }
 
   /* HEADER */
   .header__content {
-    flex-wrap: wrap;          /* menu i logo mogą się łamać w razie potrzeby */
+    flex-wrap: wrap;        /* allow menu and logo to wrap if needed */
     justify-content: space-between;
   }
 
@@ -1523,8 +1490,9 @@ body {
 }
 
 /* =========================
-   DUŻE DESKTOPOWE EKRANY (≥1440px)
+   LARGE DESKTOP SCREENS (≥1440px)
 ========================= */
+
 @media (min-width: 1440px) {
   body {
     font-size: 17px;
