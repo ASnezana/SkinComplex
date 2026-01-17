@@ -1,33 +1,87 @@
-/* ---------------------------
-   RESET + ZMIENNE
---------------------------- */
-* {
+/* =====================================================
+   BASE RESET
+  
+   Purpose:
+   - Normalize default browser styles
+   - Improve consistency across browsers
+   - Ensure good accessibility and mobile behavior
+   ===================================================== */
+
+/* Box sizing + reset marginesów */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Smooth scrolling (UX) */
+html {
+  scroll-behavior: smooth;
+}
 
+/* Base body styles */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; /* iOS / macOS */
+  text-rendering: optimizeLegibility;
+}
 
-/* Globalny reset linków */
+/* Images & media */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Forms inherit font */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Buttons – remove default styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Links – clean base, styling handled locally */
 a {
-  text-decoration: none;           /* usuwa podkreślenie */
-  color: inherit;                  /* zachowuje kolor tekstu */
-  -webkit-text-decoration-skip-ink: none; /* Safari */
-  text-decoration-skip-ink: none; /* standard */
-}
-
-/* Reset dla wszystkich stanów */
-a:link,
-a:visited,
-a:hover,
-a:active {
-  text-decoration: none;
   color: inherit;
-  -webkit-text-decoration-skip-ink: none;
+  text-decoration: none;
+}
+
+/* Accessibility: visible focus for keyboard users */
+:focus-visible {
+  outline: 2px solid #05668D;
+  outline-offset: 3px;
+}
+
+/* Remove focus outline only for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 
+
+
+/* =====================================================
+   GLOBAL STYLES
+  
+   Purpose:
+   - Define color variables
+   - Set base typography
+   - Style common components (header, footer, buttons, etc.)
+   ===================================================== */
 :root {
 
 /*kolory Ania*/
