@@ -666,7 +666,7 @@ body {
   padding-left: 1rem; /* price less indented */
 } 
 
-/* Hover dla wierszy tabeli */
+/* Hover effect for table rows */
 .accordion-content .price-table tr:hover td {
   background-color: var(--color-light-yellow);
 }
