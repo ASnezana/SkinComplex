@@ -1075,24 +1075,24 @@ body {
     }
 
   .nav__list {
-    gap: 1rem;                /* zmniejszamy odstęp między linkami */
+    gap: 1rem;               /* reduce spacing between links */
   }
 
   /* ABOUT */
   .about__content {
-    flex-direction: column;   /* tekst i obrazek pod sobą */
+    flex-direction: column;   /* text and image stacked vertically */
     text-align: center;
-    gap: 1.5rem;              /* odstęp między elementami */
+    gap: 1.5rem;              /* spacing between elements */
   }
 
   .about__text, .about__image {
-    flex: 1 1 100%;           /* zajmują całą szerokość */
+    flex: 1 1 100%;           /* take up full width */
   }
 
   /* INFO BOX */
   .info__container {
     flex-direction: column;
-    align-items: center;      /* wyśrodkowanie boxów */
+    align-items: center;     
   }
    .info__box {
     display: flex;
@@ -1101,9 +1101,9 @@ body {
     align-items: center;
   }
 
-  /* CENNIK */
+  /* PRICING */
  .accordion-toggle {
-    padding: 0.9rem 1.5rem; /* lekko mniejsze niż desktop */
+    padding: 0.9rem 1.5rem; /* slightly smaller than desktop */
   }
 
   .accordion-toggle .price-title {
@@ -1126,25 +1126,26 @@ body {
   }
 
 
-  /* GALERIA */
+  /* GALLERY*/
   .gallery__grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  /*MAPA */
+  /*MAP */
    #map-consent {
     padding: 0.55rem 1.25rem;
     font-size: 0.9rem;
    } 
 
-  /* KONTAKT */
-  .contact__details p {
-    flex-wrap: wrap;        /* tekst może się zawijać pod ikoną */
-    flex-direction: row;    /* ikona i tekst w jednej linii */
+  /* CONTACT   */
+ .contact__details p {
+    flex-wrap: wrap;        /* text can wrap under the icon */
+    flex-direction: row;    /* icon and text in a single line */
     text-align: center;
-    gap: 8px;               /* odstęp między ikoną a tekstem */
-    margin: 1em auto;       /* odstęp między liniami kontaktu */
-  }
+    gap: 8px;               /* spacing between icon and text */
+    margin: 1em auto;       /* spacing between contact lines */
+}
+
 
    .cookie-banner {
     padding: 1rem 1.2rem;
@@ -1162,15 +1163,15 @@ body {
 }
 
 /* =========================
-   MOBILE i Small tablet (≤768px)
+  MOBILE and SMALL TABLETS (≤768px)
 ========================= */
 @media (max-width: 768px) {
 
-  /* OGÓLNE */
+  /* GENERAL */
   body {
     font-size: 14px;
     line-height: 1.5;
-    overflow-x: hidden; /* zapobiega poziomemu przewijaniu */
+    overflow-x: hidden; /* prevents horizontal scrolling */
   }
 
   .container {
@@ -1182,12 +1183,12 @@ body {
     font-size: 1.5rem;
   }
 
-/* PRZYCISK "BACK TO TOP" */
+/* BUTTON "BACK TO TOP" */
    #backToTop {
     width: 40px;
     height: 40px;
-    bottom: 20px;   /* nieco bliżej dolnej krawędzi */
-    right: 20px;    /* nieco bliżej prawej krawędzi */
+    bottom: 20px;   /* slightly closer to the bottom edge */
+    right: 20px;    /* slightly closer to the right edge */
     font-size: 20px;
   }
 
@@ -1207,7 +1208,7 @@ body {
     }
   
 
- .header__toggle { /* Hamburger – zawsze widoczny na mobilkach */
+ .header__toggle { /* Hamburger – always visible on mobiles */
     display: block;
     position: relative;
     z-index: 2000;
@@ -1215,26 +1216,26 @@ body {
   }
 
   .header__nav {
-    background-color: #05668D; /*ciemny lazurowy*/
+    background-color: #05668D; 
   }
 
   .nav__list {
-  position: fixed;       /* przyklejone do ekranu */
+  position: fixed;       /* fixed to the screen */
   top: 0;
-  right: -100%;          /* startuje poza ekranem */
-  height: 60vh;         /* pełna wysokość */
-  width: 80%;            /* zajmuje max 80% szerokości */
-  max-width: 300px;      /* ograniczenie na większych ekranach */
+  right: -100%;          /* starts off-screen */
+  height: 60vh;         /* full height */
+  width: 80%;            /* takes up max 80% width */
+  max-width: 300px;      /* limit on larger screens */
   flex-direction: column;
   background: var(--color-white);
   box-shadow: var(--shadow);
-  padding-top: 4rem;     /* odstęp od góry headera */
+  padding-top: 4rem;    /* space from the top of the header */
   transition: right 0.3s ease;
   z-index: 1500;
 }
   .nav__list.active {
-    right: 0;              /* pokazanie menu po kliknięciu */
-    transform: translateX(0);   /* pokazanie menu po kliknięciu */
+    right: 0;              
+    transform: translateX(0);   /* show the menu when clicked */
   }
 
    .nav__list li a {
@@ -1243,23 +1244,23 @@ body {
     text-align: center;
     font-size: 1.2rem;
   }
-/* Styl dla ostatniego linku „Kontakt” w menu nawigacyjnym na mobilkach */
+/* Style for the last link "Contact" in the mobile navigation menu */
   .nav__list li:last-child a {
- background-color: var(--color-10); /* mindaro tło dla „Kontakt” */
- color: var(--color-1);           /* kontrastowy tekst */
+ background-color: var(--color-10); 
+ color: var(--color-1);           
 }
 
-   /* Animacja X */
- /* Hamburger – płynna animacja obrotu */
+ /* "X" animation */
+/* Hamburger – smooth rotation animation */
 .header__toggle i {
   transition: transform 0.4s ease;
 }
 
-/* Rotacja przy otwarciu menu */
+/* Rotation when the menu is opened */
 .header__toggle.open i {
-  transform: rotate(90deg); /* X obraca się o 90 stopni */
+  transform: rotate(90deg); /* X rotates 90 degrees */
 }
- /* Scroll-margin-top dla sekcji, żeby nie zasłaniał ich nav-bar / phone-bar, oprócz #home które ma być widoczne z phone-bar  */
+ /* Scroll-margin-top for sections so they are not hidden behind the nav-bar / phone-bar, except #home which should remain visible with the phone-bar */
   #about,
   #services,
   #gallery,
@@ -1281,11 +1282,12 @@ body {
 
   /* HERO */
   .hero {
-    height: 100vh;           /* pełna wysokość ekranu na mobilkach */
+    height: 100vh;          /* full viewport height on mobile devices */
   }
 
 .hero__slide {
-    background-attachment: scroll; /* zapobiega problemom z tłem na mobilkach */
+    background-attachment: scroll; /* prevents background issues, problems on mobile devices */
+
   }
 
   .hero__title {
@@ -1298,7 +1300,7 @@ body {
     top: 52%;
   }
 
-  /* INFO BOXY */
+  /* INFO BOX */
   .info__container {
     flex-direction: column;
     gap: 1rem;
@@ -1324,7 +1326,7 @@ body {
 
   /* SERVICES */
   .services__grid {
-    grid-template-columns: 1fr;  /* każdy kafelek w nowym wierszu */
+    grid-template-columns: 1fr;  /* each tile in a new row */
     gap: 1rem;
     width: 90%;
   }
@@ -1333,13 +1335,13 @@ body {
     .gallery__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 8px; /* opcjonalnie */
+    gap: 8px; 
   }
 
- 
-  /* CENNIK */
+
+  /* PRICE TABLE */
    .accordion-toggle {
-    padding: 0.8rem 1rem; /* mniejsze paddingi na mobile */
+    padding: 0.8rem 1rem; /* smaller padding on mobile */
   }
 
   .accordion-toggle .price-title {
@@ -1368,38 +1370,38 @@ body {
 
 
 
- /* INFO BOXES – MOBILKI*/
+ /* INFO BOX – MOBILE*/
 
   .info__container {
-    flex-direction: column;        /* każdy box w osobnym wierszu */
-    align-items: center;           /* wyśrodkowanie poziome całej kolumny */
+    flex-direction: column;        /* each box in a separate row */
+    align-items: center;           /* horizontal centering of the entire column */
   }
 
   .info__box {
-    flex: 1 1 auto;                /* elastyczny box, dopasowuje się do szerokości */
-    width: 90%;                     /* zajmuje większość szerokości ekranu */
+    flex: 1 1 auto;                /* flexible box, adjusts to available width */
+    width: 90%;                   /* takes up most of the screen width */
     display: flex;
-    flex-direction: column;         /* ikona nad tekstem */
-    justify-content: center;        /* wyśrodkowanie pionowe */
-    align-items: center;            /* wyśrodkowanie poziome */
+    flex-direction: column;         /* icon above the text */
+    justify-content: center;       /* vertical centering */
+    align-items: center;            /* horizontal centering */
     text-align: center;
-    padding: 1.5rem;               /* większy padding dla lepszego wyglądu */
-    margin-bottom: 1rem;           /* odstęp między boxami */
+    padding: 1.5rem;               /* greater padding for better appearance */
+    margin-bottom: 1rem;           /* gap between boxes */
   }
 
   .info__box img {
-    margin-bottom: 0.75rem;        /* trochę większy odstęp między ikoną a tekstem */
+    margin-bottom: 0.75rem;    /* slightly larger space between icon and text */
   }
 
   .info__box p {
-    margin: 0;                     /* usuwa dodatkowe marginesy w mobilkach */
+    margin: 0;                  /* removes extra margins on mobile */
   }
 
 
 
-  /* MAPA */
+  /* MAP */
   .map-responsive {
-    padding-bottom: 75%; /* bardziej pionowy aspekt dla małych ekranów */
+    padding-bottom: 75%; /* taller aspect ratio for small screens */
   }
 
     #map-consent {
@@ -1410,13 +1412,13 @@ body {
     display: block;
   }
 
-  /* KONTAKT - IKONY NAD TEKSTEM */
+ /* CONTACT - ICONS ABOVE TEXT */
   .contact__details p {
     display: flex;  
-    flex-direction: column;  /* ikona nad tekstem */
+    flex-direction: column;  /* icon above text */
     text-align: center;
-    gap: 8px;                /* odstęp między ikoną a tekstem */
-    margin-bottom: 1.5rem;   /* odstęp między kolejnymi kontaktami */
+    gap: 8px;                /* gap between icon and text */
+    margin-bottom: 1.5rem;   /* gap between consecutive contacts */
   }
 
   .contact__details .icon-badge {
