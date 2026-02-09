@@ -239,6 +239,12 @@ body {
   font-family: 'Montserrat', sans-serif; /* sets font family */
 }
 
+.nav__socials {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: auto;
+}
 
 .nav__list a:hover {
   color: var(--color-4); /* green on hover  */
@@ -1242,9 +1248,21 @@ body {
     font-size: 1.2rem;
   }
 /* Style for the last link "Contact" in the mobile navigation menu */
-  .nav__list li:last-child a {
+  .nav__list li:nth-child(6) a {
  background-color: var(--color-10); 
  color: var(--color-1);           
+}
+
+.nav__socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.nav__socials a {
+  font-size: 1.6rem;
+  padding: 0.5rem;
 }
 
  /* "X" animation */
