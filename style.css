@@ -1226,7 +1226,7 @@ body {
   position: fixed;       /* fixed to the screen */
   top: 0;
   right: -100%;          /* starts off-screen */
-  height: 60vh;         /* full height */
+  height: auto;          /* full height of the menu */
   width: 80%;            /* takes up max 80% width */
   max-width: 300px;      /* limit on larger screens */
   flex-direction: column;
@@ -1257,7 +1257,8 @@ body {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; /* spacing below the social icons */
 }
 
 .nav__socials a {
