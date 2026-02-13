@@ -356,8 +356,7 @@ body {
    ABOUT
 --------------------------- */
 .about {
-  padding: 4rem 0 0; /* usuń dolny padding żeby pod obrazem nie było żółtego paska */
-  /*background-color: var(--color-10); */ /* mindaro tło sekcji o mnie */
+  padding: 4rem 0 0; 
 }
 
 .about__content {
