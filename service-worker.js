@@ -1,4 +1,4 @@
-const CACHE_NAME = 'skincomplex-cache-v2';
+const CACHE_NAME = 'skincomplex-cache-v3';
 
 // Pliki statyczne / priorytetowe
 const STATIC_ASSETS = [
@@ -11,7 +11,7 @@ const STATIC_ASSETS = [
   '/images/apple-touch-icon.png',
   '/images/favicon-32x32.png',
   '/images/favicon-16x16.png',
-  '/images/logo-bez-tla.png'
+  '/images/logo-bez-tla.png',
 ];
 
 // Limit obrazów w cache galerii
