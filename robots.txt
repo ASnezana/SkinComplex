@@ -1,4 +1,4 @@
-# Zezwalamy wszystkim robotom wyszukiwarek na indeksowanie całej strony oprócz js, images, README.
+# Zezwalamy wszystkim robotom wyszukiwarek na indeksowanie calej strony oprocz js, images, README.
 User-agent: *
 Disallow:  /README.md
 Disallow: /js/
