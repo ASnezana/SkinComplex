@@ -1,8 +1,11 @@
-# Allow all search engine robots to crawl the site except js, images, README.
+# Block unnecessary or private files/folders
 User-agent: *
-Disallow: /README.md
 Disallow: /js/
 Disallow: /images/
+Disallow: /README.md
 
-# Link to sitemap
+# Allow everything else
+Allow: /
+
+# Sitemap location
 Sitemap: https://skincomplex.pl/sitemap.xml
