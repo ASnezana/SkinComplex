@@ -1,8 +1,8 @@
-# Zezwalamy wszystkim robotom wyszukiwarek na indeksowanie calej strony oprocz js, images, README.
+# Allow all search engine robots to crawl the site except js, images, README.
 User-agent: *
-Disallow:  /README.md
+Disallow: /README.md
 Disallow: /js/
 Disallow: /images/
 
-# Link do mapy strony 
+# Link to sitemap
 Sitemap: https://skincomplex.pl/sitemap.xml
