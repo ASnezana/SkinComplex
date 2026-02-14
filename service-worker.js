@@ -7,7 +7,7 @@ const STATIC_ASSETS = [
   '/polityka-prywatnosci.html',
   '/style.css',
   '/script.js',
-  '/site.webmanifest',
+  '/manifest.json',
   '/images/apple-touch-icon.png',
   '/images/favicon-32x32.png',
   '/images/favicon-16x16.png',
