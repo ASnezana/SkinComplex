@@ -28,3 +28,11 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.html [L]
 </IfModule>
+
+# --- Wymuszanie prawidłowego Content-Type dla robots.txt ---
+<Files "robots.txt">
+    ForceType text/plain
+    AddCharset UTF-8 .txt
+</Files>
+
+ 
