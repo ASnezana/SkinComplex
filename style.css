@@ -92,7 +92,6 @@ a {
 
 html {
   scroll-padding-top: 120px; /* adjust to the height of the header */
-  scroll-behavior: smooth; /* smooth scrolling for anchor links */
 }
 
 
@@ -149,7 +148,6 @@ body {
   background-color: var(--color-7); 
   color: var(--color-plum);
   line-height: 1.6;
-  overflow-x: hidden; /*prevent horizontal scroll*/
 }
 
 /* ---------------------------
