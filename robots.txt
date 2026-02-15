@@ -1,11 +1,9 @@
-# Block unnecessary or private files/folders
+# Blokuj tylko plik README.md
 User-agent: *
-Disallow: /js/
-Disallow: /images/
 Disallow: /README.md
 
-# Allow everything else
+# Pozwol na wszystko inne
 Allow: /
 
-# Sitemap location
+# Lokalizacja mapy strony
 Sitemap: https://skincomplex.pl/sitemap.xml
