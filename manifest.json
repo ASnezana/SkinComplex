@@ -4,6 +4,7 @@
   "description": "Profesjonalny salon kosmetyczny Skin Complex w Szamotułach - zabiegi pielęgnacyjne, manicure, pedicure i zabiegi na twarz.",
   "start_url": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "theme_color": "#05668D",
   "background_color": "#FFFFFF",
   "icons": [
