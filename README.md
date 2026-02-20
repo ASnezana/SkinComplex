@@ -6,7 +6,7 @@ Responsive, modern, and user-friendly, with many interactive sections and animat
 ---
 
 ## 🖼 Demo
-[View live website](https://skin-complex.netlify.app/)
+[View live website](https://skincomplex.pl/)
 
 ---
 
@@ -109,7 +109,7 @@ Responsywna, nowoczesna i przyjazna dla użytkownika, z wieloma interaktywnymi s
 ---
 
 ## 🖼 Demo
-[Zobacz stronę na żywo](https://skin-complex.netlify.app/)
+[Zobacz stronę na żywo](https://skincomplex.pl/)
 
 
 ---
