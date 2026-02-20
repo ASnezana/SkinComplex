@@ -1,211 +1,104 @@
-# 💆‍♀️ Skin Complex - Beauty Salon
+EN
 
-Website for the beauty salon **Skin Complex** in Szamotuły.  
-Responsive, modern, and user-friendly, with many interactive sections and animations.
+Official website of Skin Complex salon in Szamotuły, built as a fully responsive, performant, and SEO-friendly web application.
 
----
+The site is deployed in production, fully supporting PWA, offline caching, and proper server configuration.
 
-## 🖼 Demo
-[View live website](https://skincomplex.pl/)
+Technologies
 
----
+HTML5 and semantic structure
 
-## ⚡ Features
+CSS (Flexbox, Grid, variables, responsive typography)
 
-### 🌐 Layout & Responsiveness
-- ✅ Responsive layout (desktop / tablet / mobile) – Flexbox & CSS Grid  
-- ✅ Semantic HTML5 tags (`header`, `main`, `section`, `footer`)  
-- ✅ Section highlighting for SEO (`h1` with `visually-hidden`, `h2` in each section)  
+Vanilla JavaScript (ES6+)
 
-### 🏠 Header & Navigation
-- 🍔 Hamburger menu with icon rotation animation (`fa-bars` ↔ `fa-xmark`)  
-- ♿ ARIA support: `aria-label`, `aria-expanded`, `aria-controls` for accessibility  
-- 🔒 Menu closes when clicking a link  
-- ✨ Smooth open/close transitions in JS  
+Service Worker and Web App Manifest
 
-### 🎞 Hero Slider
-- ⏱ Automatic image slider in the `hero` section  
-- 🔄 Slides change every 5 seconds (`setInterval`)  
-- 🎨 Ability to set `background-image` inline or in CSS  
+Apache (.htaccess)
 
-### 💁‍♀️ About Section
-- 🖼 Photo and description of the owner in grid/flex layout  
-- 💬 Quote overlay (`about__quote` with `about__overlay`)  
-- 📱 Responsive display for content and image  
+SEO: sitemap.xml, robots.txt, meta tags, HTTPS
 
-### 💅 Services Section
-- 🏷 Service icons in a grid (`services__grid`)  
-- 🖱 Tooltips on hover for each service (`data-tooltip`)  
-- 🔗 Anchor links leading to specific sections  
+Key Features
 
-### 💰 Pricing Section
-- 📂 Accordion (`accordion-toggle`) with JS – expand/collapse content  
-- 🔒 Automatically closes other sections when opening one  
+Responsive and accessible frontend: hamburger menu, pricing accordion, back-to-top button, deep linking
 
-### 🖼 Gallery Section
-- 🖼 Lightbox2 for images – fullscreen view and navigation  
-- 🐌 Lazy loading images (`loading="lazy"`)  
-- 📐 Responsive gallery grid  
+PWA and caching: versioned static and dynamic cache, image limit, offline fallback for documents
 
-### 📞 Contact Section
-- 📍 Contact information with icons (`fa-solid`)  
-- ☎️ `tel:` and `mailto:` links  
-- 🗺 Google Maps section (`iframe`) with lazy loading  
+Performance optimization: WebP/PNG, lazy loading, browser cache, enforced HTTPS
 
-### 🔗 Social Section
-- 📸 Social media icons (Instagram, Facebook, Blog)  
-- 🌐 Links open in a new tab (`target="_blank"`) with `aria-label`  
+SEO and local SEO: correct meta tags, structured data, sitemap, robots.txt, proper MIME types
 
-### 📝 Footer
-- © Standard footer with copyright  
-- ✅ Fully responsive  
+Deployment and server setup: domain configuration, SSL, .htaccess, files on server, website email account
 
-### 🔝 Back-to-top Button
-- 👆 Appears when scrolling down (`window.scrollY > 300`)  
-- 🏃‍♀️ Smooth scroll to top (`scrollTo({behavior:"smooth"})`)  
+Project Structure
+index.html
+polityka-prywatnosci.html
+style.css
+script.js
+service-worker.js
+manifest.json
+sitemap.xml
+robots.txt
+.htaccess
+images/
+Summary
 
-### ⚙️ SEO & Accessibility
-- 🔍 Hidden `h1` for SEO (`visually-hidden`)  
-- ♿ ARIA attributes for menu  
-- 🖼 Alt text (`alt`) for all images  
+This project is a fully deployed, performant, and responsive website, available offline as a PWA, with proper server setup, SEO, and security.
+It demonstrates skills from frontend development, performance optimization, and SEO, to deployment and production environment configuration.
 
-### ✨ Extras
-- 🎨 Font Awesome for icons  
-- 🌈 Decorative color bars (`color-bar`, optional `phone-bar`)  
-- 🔄 CSS effects: hover, transforms, animations  
 
----
-
-## 🛠 Tech Stack
-- HTML5  
-- CSS3 (Flexbox, Grid, CSS Variables)  
-- JavaScript (ES6+)  
-- Lightbox2 (Gallery)  
-- Font Awesome (icons)  
-
----
-
-## 📂 File Structure
-/index.html  
-/css/style.css  
-/js/script.js  
-/images/  
-/README.md  
-
----
-
-## 📌 Author
-Skin Complex 💆‍♀️ – design & coding by Snow WhITe, 2025
+Live site: https://skincomplex.pl
 
 
 
 
+Skin Complex — Progressive Web App
+PL
 
-# 💆‍♀️ Skin Complex - Salon Kosmetyczny
+Oficjalna strona salonu Skin Complex w Szamotułach, stworzona jako w pełni responsywna, wydajna i SEO-przyjazna aplikacja webowa.
 
-Strona internetowa dla salonu kosmetycznego **Skin Complex** w Szamotułach.  
-Responsywna, nowoczesna i przyjazna dla użytkownika, z wieloma interaktywnymi sekcjami i animacjami.
+Strona jest produkcyjnie wdrożona, z pełną obsługą PWA, cache’owaniem offline oraz poprawną konfiguracją serwera.
 
----
+Technologie
 
-## 🖼 Demo
-[Zobacz stronę na żywo](https://skincomplex.pl/)
+HTML5 i semantyczna struktura
 
+CSS (Flexbox, Grid, zmienne, responsywne typografie)
 
----
+Vanilla JavaScript (ES6+)
 
-## ⚡ Features / Funkcjonalności
+Service Worker i Web App Manifest
 
-### 🌐 Layout & Responsiveness
-- ✅ Responsywny układ (desktop / tablet / mobile) – Flexbox i CSS Grid  
-- ✅ Semantyczne znaczniki HTML5 (`header`, `main`, `section`, `footer`)  
-- ✅ Wyróżnienie sekcji dla SEO (`h1` z `visually-hidden`, `h2` w każdej sekcji)  
+Apache (.htaccess)
 
-### 🏠 Header & Navigation
-- 🍔 Hamburger menu z animacją obracania ikony (`fa-bars` ↔ `fa-xmark`)  
-- ♿ Obsługa ARIA: `aria-label`, `aria-expanded`, `aria-controls` dla dostępności  
-- 🔒 Zamknięcie menu po kliknięciu w link  
-- ✨ Płynne przejścia otwierania / zamykania menu w JS  
+SEO: sitemap.xml, robots.txt, meta tagi, HTTPS
 
-### 🎞 Hero Slider
-- ⏱ Automatyczny slider obrazków w sekcji `hero`  
-- 🔄 Przełączanie slajdów co 5 sekund (`setInterval`)  
-- 🎨 Możliwość dodania `background-image` inline lub w CSS  
+Najważniejsze cechy
 
-### 💁‍♀️ About Section
-- 🖼 Zdjęcie i opis właścicielki w układzie grid/flex  
-- 💬 Cytat w overlay (`about__quote` z `about__overlay`)  
-- 📱 Responsywne wyświetlanie treści i obrazka  
+Responsywny i dostępny frontend: menu hamburger, akordeon w cenniku, przyciski powrotu do góry, deep linking
 
-### 💅 Services Section
-- 🏷 Ikony usług w siatce (`services__grid`)  
-- 🖱 Tooltipy przy hover dla każdej usługi (`data-tooltip`)  
-- 🔗 Anchor links prowadzące do konkretnych sekcji  
+PWA i cache: wersjonowany cache statyczny i dynamiczny, limit obrazów, fallback offline dla dokumentów
 
-### 💰 Pricing Section
-- 📂 Akordeon (`accordion-toggle`) z JS – rozwijanie i zwijanie treści  
-- 🔒 Automatyczne zamykanie innych sekcji przy otwieraniu jednej  
+Optymalizacja wydajności: WebP/PNG, lazy loading, cache przeglądarki, wymuszenie HTTPS
 
-### 🖼 Gallery Section
-- 🖼 Lightbox2 dla zdjęć – pełnoekranowe powiększenie i nawigacja między zdjęciami  
-- 🐌 Lazy loading obrazów (`loading="lazy"`)  
-- 📐 Responsywna siatka galerii  
+SEO i lokalne SEO: poprawne meta tagi, struktura danych, sitemap, robots.txt, poprawne MIME type
 
-### 📞 Contact Section
-- 📍 Informacje kontaktowe z ikonami (`fa-solid`)  
-- ☎️ Linki działające jako `tel:` i `mailto:`  
-- 🗺 Sekcja mapy Google (`iframe`) z lazy loading  
+Deployment i serwer: konfiguracja domeny, SSL, .htaccess, pliki strony na serwerze, konto e-mail strony
 
-### 🔗 Social Section
-- 📸 Ikony social media (Instagram, Facebook, Blog)  
-- 🌐 Linki otwierane w nowej karcie (`target="_blank"`) z `aria-label`  
+Struktura projektu
+index.html
+polityka-prywatnosci.html
+style.css
+script.js
+service-worker.js
+manifest.json
+sitemap.xml
+robots.txt
+.htaccess
+images/
+Podsumowanie
 
-### 📝 Footer
-- © Standardowy footer z prawami autorskimi  
-- ✅ W pełni responsywny  
+Projekt to w pełni wdrożona, wydajna i responsywna strona internetowa, dostępna offline jako PWA, z poprawną konfiguracją serwera, SEO i bezpieczeństwem.
+Pokazuje umiejętności od frontend developmentu, przez optymalizację i SEO, po deployment i konfigurację środowiska produkcyjnego.
 
-### 🔝 Back-to-top Button
-- 👆 Wyświetlanie przy przewinięciu (`window.scrollY > 300`)  
-- 🏃‍♀️ Płynny scroll do góry (`scrollTo({behavior:"smooth"})`)  
-
-### ⚙️ SEO & Accessibility
-- 🔍 Ukryty `h1` dla SEO (`visually-hidden`)  
-- ♿ ARIA attributes przy menu  
-- 🖼 Teksty alternatywne (`alt`) dla wszystkich obrazków  
-
-### ✨ Extras
-- 🎨 Font Awesome do ikon  
-- 🌈 Kolorowe paski dekoracyjne (`color-bar`, opcjonalnie `phone-bar`)  
-- 🔄 Efekty CSS: hover, transformacje, animacje  
-
----
-
-## 🛠 Tech Stack
-- HTML5  
-- CSS3 (Flexbox, Grid, CSS Variables)  
-- JavaScript (ES6+)  
-- Lightbox2 (Gallery)  
-- Font Awesome (ikony)  
-
----
-
-## 📂 Struktura Plików
-├─ index.html
-├─ polityka-prywatnosci.html
-├─ style.css
-├─ script.js
-├─ service-worker.js
-├─ site.webmanifest
-├─ images/
-├─ sitemap.xml
-├─ robots.txt
-└─ .htaccess  
-
-
----
-
-## 📌 Autor
-Skin Complex 💆‍♀️ – projekt i kodowanie przez Snow WhITe, 2026
-
----
-
+Link do strony: https://skincomplex.pl
