@@ -326,7 +326,7 @@ body {
 }
 .hero__slide--1 {
   background-image: image-set(
-    url("images/new-slide-1.webp") type("image/webp"),
+    url("images/new-slide-1.webp") type("image/webp"), 
     url("images/new-slide-1.jpg") type("image/jpeg")
   );
 }
@@ -1283,7 +1283,7 @@ body {
 
  .hero__slide--1 {
   background-image: image-set(
-    url("images/new-slide-1-mobile.webp") type("image/webp"),
+    url("images/new-slide-1-mobile.webp") type("image/webp"),  
     url("images/new-slide-1-mobile.jpg") type("image/jpeg")
   );
 }
