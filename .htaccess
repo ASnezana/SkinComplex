@@ -1,27 +1,40 @@
+# --- Force HTTPS and redirect www to non-www ---
+RewriteEngine On
+
+# 1. Redirect www domain to non-www
+RewriteCond %{HTTP_HOST} ^www\.skincomplex\.pl [NC]
+RewriteRule ^(.*)$ https://skincomplex.pl/$1 [L,R=301]
+
+# 2. Redirect HTTP to HTTP
 # --- Wymuszenie HTTPS ---
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# --- Cache static resources ---
 # --- Cache statycznych zasobów ---
 <IfModule mod_expires.c>
   ExpiresActive On
 
+  # Images
   # Obrazy
   ExpiresByType image/jpeg "access plus 1 month"
   ExpiresByType image/png "access plus 1 month"
   ExpiresByType image/webp "access plus 1 month"
   ExpiresByType image/svg+xml "access plus 1 month"
 
+  # CSS and JS
   # CSS i JS
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
 
+  # Icons / manifest
   # Ikony / manifest
   ExpiresByType image/x-icon "access plus 1 month"
   ExpiresByType application/manifest+json "access plus 1 month"
 </IfModule>
 
+# --- PWA / Service Worker fallback ---
 # --- Fallback dla PWA / Service Worker ---
 <IfModule mod_rewrite.c>
   RewriteCond %{REQUEST_FILENAME} !-f
@@ -29,6 +42,7 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   RewriteRule ^ index.html [L]
 </IfModule>
 
+# --- Force correct Content-Type for robots.txt ---
 # --- Wymuszanie prawidłowego Content-Type dla robots.txt ---
 <Files "robots.txt">
     ForceType text/plain
