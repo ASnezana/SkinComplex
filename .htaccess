@@ -1,3 +1,12 @@
+# --- TEMPORARY BLOCK (403) ---
+# Wyłącza całą stronę na chwilę (np. przerwa / prace)
+# Aby przywrócić stronę: usuń lub zakomentuj poniższą linijkę
+Require all denied
+
+
+
+
+
 # --- Force HTTPS and redirect www to non-www ---
 RewriteEngine On
 
